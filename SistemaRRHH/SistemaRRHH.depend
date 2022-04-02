@@ -9,9 +9,19 @@
 	"Empleado.h"
 	<iostream>
 
-1648929489 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
+1648934532 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	<iostream>
 
-1648929489 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
+1648934532 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
+
+1648934532 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
+	<iostream>
+	"Empleado.h"
+
+1648935414 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
+	"Puestos.h"
+	<iostream>
+
+1648935356 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
 

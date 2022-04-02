@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Empleado.h"
+#include "Puestos.h"
 
 using namespace std;
 
@@ -16,20 +17,26 @@ int main()
 
          // crear el archivo de texto a partir del archivo de registros
          case empleados:
-            Empleado claseempleado;
+            {
+                Empleado claseempleado;
+            }
             break;
+         case puestos:
+            {
+                Puestos clasepuestos;
+            }
+            break;
+
         }
     }
-
-
 
     return 0;
 }
 
 int escribirOpcion()
 {
-    int opcionMenu;
-    cout<<"\t\t\t---------------------------------"<<endl;
+   // mostrar opciones disponibles
+   cout<<"\t\t\t---------------------------------"<<endl;
 	cout<<"\t\t\t |   SISTEMA RECURSOS HUMANOS  |"<<endl;
 	cout<<"\t\t\t---------------------------------"<<endl;
 
@@ -40,6 +47,9 @@ int escribirOpcion()
         << "4 - Impuestos" << endl
         << "5 - generación de nomina" << endl
         << "6 - Finalizar el programa\n R - ";
-    cin >> opcionMenu;
-    return opcionMenu;
+   int opcionMenu;
+   cin >> opcionMenu; // recibir opción del usuario
+
+   return opcionMenu;
+
 }
