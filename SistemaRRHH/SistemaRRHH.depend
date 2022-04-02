@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1648875926 source:c:\users\monica pérez\desktop\progra i\sistemarrhh\src\empleado.cpp
+	"Empleado.h"
+	<iostream>
+
+1648875521 c:\users\monica pérez\desktop\progra i\sistemarrhh\include\empleado.h
+
+1648876048 source:c:\users\monica pérez\desktop\progra i\sistemarrhh\main.cpp
+	"Empleado.h"
+	<iostream>
+
