@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Empleado.h"
 #include "Puestos.h"
+#include "Departamentos.h"
 
 using namespace std;
 
@@ -24,6 +25,11 @@ int main()
          case puestos:
             {
                 Puestos clasepuestos;
+            }
+            break;
+         case departamentos:
+            {
+                Departamentos clasedepartamentos;
             }
             break;
 
