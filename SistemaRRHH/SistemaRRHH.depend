@@ -25,20 +25,23 @@
 
 1648939357 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
 
-1649008150 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\main.cpp
+1649029069 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
+	"Departamento.h"
 
-1649008150 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\empleado.h
+1649028534 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\empleado.h
 
-1649008150 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\puestos.h
+1649028534 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\puestos.h
 
-1649008150 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\src\empleado.cpp
+1649028534 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	<iostream>
 
-1649008150 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\src\puestos.cpp
+1649028534 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	<iostream>
+
+1649028866 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\departamento.h
 
