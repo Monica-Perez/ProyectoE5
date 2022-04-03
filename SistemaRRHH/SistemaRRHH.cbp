@@ -34,9 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Departamentos.h" />
 		<Unit filename="include/Empleado.h" />
 		<Unit filename="include/Puestos.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Departamentos.cpp" />
 		<Unit filename="src/Empleado.cpp" />
 		<Unit filename="src/Puestos.cpp" />
 		<Extensions>
