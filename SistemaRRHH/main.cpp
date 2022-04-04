@@ -2,6 +2,8 @@
 #include "Empleado.h"
 #include "Puestos.h"
 #include "Departamento.h"
+#include "Impuestos.h"
+#include "Nomina.h"
 
 using namespace std;
 
@@ -31,14 +33,25 @@ int main()
             {
                 Departamento clasedepartamentos;
             }
+            break;
+          case impuestos:
+            {
+                Impuestos claseimpuestos;
+            }
+            break;
+          case nomina:
+            {
+                Nomina clasenomina;
+            }
+            break;
         }
     }
 
     return 0;
 }
 
-int escribirOpcion()
-{
+
+int escribirOpcion(){
    // mostrar opciones disponibles
    cout<<"\t\t\t---------------------------------"<<endl;
 	cout<<"\t\t\t |   SISTEMA RECURSOS HUMANOS  |"<<endl;
@@ -49,12 +62,11 @@ int escribirOpcion()
         << "2 - Puestos" << endl
         << "3 - Departamentos" << endl
         << "4 - Impuestos" << endl
-        << "5 - generación de nomina" << endl
-        << "6 - Finalizar el programa\n R - ";
+        << "5 - Generacion de Nomina" << endl
+        << "6 - Finalizar el Programa\n R - ";
    int opcionMenu;
    cin >> opcionMenu; // recibir opción del usuario
 
    return opcionMenu;
 
 }
-
