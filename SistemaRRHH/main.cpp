@@ -4,9 +4,13 @@
 #include "Departamento.h"
 #include "Impuestos.h"
 #include "Nomina.h"
+#include <fstream>
+#include <iomanip>
+#include <cstdlib>
 
 using namespace std;
 
+void crearArchivoPuestos();
 int escribirOpcion();
 
 enum Opciones { empleados = 1, puestos, departamentos, impuestos, nomina, FIN };
