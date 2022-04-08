@@ -34,19 +34,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/DatosEmpleado.h" />
+		<Unit filename="include/DatosEmpresas.h" />
 		<Unit filename="include/Departamento.h" />
 		<Unit filename="include/Empleado.h" />
+		<Unit filename="include/Empresas.h" />
 		<Unit filename="include/Impuestos.h" />
 		<Unit filename="include/Nomina.h" />
 		<Unit filename="include/Puestos.h" />
-		<Unit filename="include/datosPuestos.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/DatosEmpleado.cpp" />
+		<Unit filename="src/DatosEmpresas.cpp" />
 		<Unit filename="src/Departamento.cpp" />
 		<Unit filename="src/Empleado.cpp" />
+		<Unit filename="src/Empresas.cpp" />
 		<Unit filename="src/Impuestos.cpp" />
 		<Unit filename="src/Nomina.cpp" />
 		<Unit filename="src/Puestos.cpp" />
-		<Unit filename="src/datosPuestos.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
