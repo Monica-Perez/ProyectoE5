@@ -15,7 +15,7 @@
 
 1649289652 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
 
-1649363784 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
+1649376135 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -35,7 +35,7 @@
 	<cstdlib>
 	<cstring>
 
-1649373635 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
+1649376135 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
 	<fstream>
 	<iomanip>
 	<cstdlib>
@@ -117,7 +117,7 @@
 	"Nomina.h"
 	<iostream>
 
-1649364119 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datospuestos.cpp
+1649376135 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datospuestos.cpp
 	"datosPuestos.h"
 	<iostream>
 	<fstream>
@@ -125,6 +125,6 @@
 	<cstdlib>
 	<cstring>
 
-1649373229 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datospuestos.h
+1649376135 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datospuestos.h
 	<iostream>
 
