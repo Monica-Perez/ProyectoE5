@@ -7,47 +7,47 @@
 
 using namespace std;
 
-datosPuestos::datosPuestos(int valorCodigo, string valorApellido, string valorNombre)
+datosPuestos::datosPuestos(int valorCodigoP, string valorEstatus, string valorNombrePuestos)
 {
-    establecerCodigo( valorCodigo );
-    establecerApellido( valorApellido );
-    establecerNombre( valorNombre );
+    establecerCodigoP( valorCodigoP );
+    establecerEstatus( valorEstatus );
+    establecerNombrePuestos( valorNombrePuestos );
 }
-int datosPuestos::obtenerCodigo() const
+int datosPuestos::obtenerCodigoP() const
 {
-   return codigo;
+   return codigoP;
 }
-void datosPuestos::establecerCodigo( int valorCodigo )
+void datosPuestos::establecerCodigoP( int valorCodigoP )
 {
-   codigo = valorCodigo;
+   codigoP = valorCodigoP;
 }
-string datosPuestos::obtenerApellido() const
+string datosPuestos::obtenerEstatus() const
 {
-   return apellido;
+   return Estatus;
 
 }
-void datosPuestos::establecerApellido( string apellidoString )
+void datosPuestos::establecerEstatus( string EstatusString )
 {
-    const char *valorApellido = apellidoString.data();
-    int longitud = strlen( valorApellido );
-    longitud = ( longitud < 15 ? longitud : 14 );
-    strncpy( apellido, valorApellido, longitud );
+    const char *valorEstatus = EstatusString.data();
+    int longitudP = strlen( valorEstatus );
+    longitudP = ( longitudP < 15 ? longitudP : 14 );
+    strncpy( Estatus, valorEstatus, longitudP );
 
-    apellido[ longitud ] = '\0';
+    Estatus[ longitudP ] = '\0';
 
 }
 string datosPuestos::obtenerNombre() const
 {
-   return nombre;
+   return nombreP;
 }
-void datosPuestos::establecerNombre( string primerNombre )
+void datosPuestos::establecerNombrePuestos( string nombrePuestos )
 {
-    const char *valorNombre = primerNombre.data();
-    int longitud = strlen( valorNombre );
-    longitud = ( longitud < 10 ? longitud : 9 );
-    strncpy( nombre, valorNombre, longitud );
+    const char *valorNombrePuestos = nombrePuestos.data();
+    int longitudP = strlen( valorNombrePuestos );
+    longitudP = ( longitudP < 10 ? longitudP : 9 );
+    strncpy( nombreP, valorNombrePuestos, longitudP );
 
-    primerNombre[ longitud ] = '\0';
+    nombrePuestos[ longitudP ] = '\0';
 
 }
 

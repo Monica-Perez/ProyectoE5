@@ -19,21 +19,35 @@
 	"Empresas.h"
 	"Nomina.h"
 
-1648934532 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
+	"DatosEmpleado.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
 	<iostream>
 
-1648934532 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
-
-1648934532 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
+	"Puestos.h"
+	"Departamento.h"
+	"Impuestos.h"
+	"Empresas.h"
+	"Nomina.h"
 
-1648939357 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	<iostream>
 
-1648939357 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
+1649453902 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
 
 1649029069 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
@@ -158,4 +172,50 @@
 	<fstream>
 	<iomanip>
 	<cstdlib>
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\departamento.h
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\impuestos.h
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empresas.h
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\nomina.h
+
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"Empleado.h"
+	<cstring>
+	<iostream>
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosempleado.h
+	<iostream>
+
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosempresas.cpp
+	"DatosEmpresas.h"
+	"Empresas.h"
+	<cstring>
+	<iostream>
+
+1649431799 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosempresas.h
+	<iostream>
+
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\departamento.cpp
+	"Departamento.h"
+	<iostream>
+
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empresas.cpp
+	"Empresas.h"
+	"DatosEmpresas.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+
+1649431799 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\nomina.cpp
+	"Nomina.h"
+	<iostream>
 
