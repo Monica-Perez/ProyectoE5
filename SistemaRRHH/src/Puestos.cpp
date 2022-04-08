@@ -97,7 +97,7 @@ int Puestos::escribirOption()
 
 void imprimirRegistro( fstream &leerDeArchivo )
 {
-    ofstream archivoImprimirSalida( "Imprimir.txt", ios::out );
+    ofstream archivoImprimirSalida( "ImprimirPuestos.txt", ios::out );
     if ( !archivoImprimirSalida ) {
         cerr << "No se pudo crear el archivo." << endl;
         exit( 1 );
