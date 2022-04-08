@@ -11,21 +11,21 @@ class datosPuestos
 
         datosPuestos( int = 0, string = "", string = "");
 
-        void establecerCodigo( int );
-        int obtenerCodigo() const;
+        void establecerCodigoP( int );
+        int obtenerCodigoP() const;
 
-        void establecerApellido( string );
-        string obtenerApellido() const;
+        void establecerEstatus( string );
+        string obtenerEstatus() const;
 
-        void establecerNombre( string );
+        void establecerNombrePuestos( string );
         string obtenerNombre() const;
 
     protected:
 
     private:
-        int codigo;
-        char apellido[ 15 ];
-        char nombre[ 10 ];
+        int codigoP;
+        char Estatus[ 15 ];
+        char nombreP[ 10 ];
 };
 
 #endif // DATOSPUESTOS_H
