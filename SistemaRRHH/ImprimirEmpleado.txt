@@ -1,0 +1,3 @@
+Codigo    Apellido        Nombre        Correo              Sueldo
+1         Lopez           Roberto       gmail              5300.00
+2         Perez           Juan          jgmail.com         2100.00
