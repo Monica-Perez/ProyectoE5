@@ -9,21 +9,37 @@
 	"Empleado.h"
 	<iostream>
 
-1648934532 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
+1649289652 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	<iostream>
 
-1648934532 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
+1649289652 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
 
-1648934532 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
+1649363784 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
-
-1648939357 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
-	<iostream>
+	"Departamento.h"
+	"Impuestos.h"
+	"Nomina.h"
+	<fstream>
+	<iomanip>
+	<cstdlib>
 
-1648939357 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
+1649375042 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
+	"Puestos.h"
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1649373635 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
 
 1649029069 source:c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
@@ -82,4 +98,33 @@
 	"Departamento.h"
 	"Impuestos.h"
 	"Nomina.h"
+
+1649289652 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\departamento.h
+
+1649289652 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\impuestos.h
+
+1649289652 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\nomina.h
+
+1649289652 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\departamento.cpp
+	"Departamento.h"
+	<iostream>
+
+1649289652 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+
+1649289652 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\nomina.cpp
+	"Nomina.h"
+	<iostream>
+
+1649364119 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datospuestos.cpp
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1649373229 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datospuestos.h
+	<iostream>
 
