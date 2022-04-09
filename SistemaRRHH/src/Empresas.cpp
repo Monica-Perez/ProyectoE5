@@ -73,17 +73,19 @@ Empresas::Empresas()
 }
 int opcionEmpre(){
     //system("cls");
+    cout<<"\n\t\t\t---------------------------------"<<endl;
     cout<<"\n\t\t\t\t-----------------"<<endl;
 	cout<<"\t\t\t\t |   EMPRESAS  |"<<endl;
 	cout<<"\t\t\t\t-----------------"<<endl;
 
-    cout<< "\nEscriba su opcion" << endl
-        << " 1. Guardar archivo de texto para Imprimirlo" << endl
-        << " 2. Agregar Empresa" << endl
-        << " 3. Modificar Empresa" << endl
-        << " 4. Eliminar Empresa" << endl
-        << " 5. Mostrar Lista de Empresa" << endl
-        << " 6. Finalizar el programa\n  R- ";
+    cout<< "\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
+        << "\t\t\t 2. Agregar Empresa" << endl
+        << "\t\t\t 3. Modificar Empresa" << endl
+        << "\t\t\t 4. Eliminar Empresa" << endl
+        << "\t\t\t 5. Mostrar Lista de Empresa" << endl
+        << "\t\t\t 6. Regresar al Menu Principal" << endl
+        << "\n\t\t\t---------------------------------"<<endl
+        << "\n\t\t\tIngrese su opcion: ";
 
    int opcionMenu;
    cin >> opcionMenu;

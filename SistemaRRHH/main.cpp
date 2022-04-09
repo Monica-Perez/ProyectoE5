@@ -60,14 +60,15 @@ int escribirOpcion(){
 	cout<<"\t\t\t |   SISTEMA RECURSOS HUMANOS  |"<<endl;
 	cout<<"\t\t\t---------------------------------"<<endl;
 
-    cout << "\nEscriba su opcion" << endl
-        << " 1. Empleados" << endl
-        << " 2. Puestos" << endl
-        << " 3. Departamentos" << endl
-        << " 4. Impuestos" << endl
-        << " 5. Empresas" << endl
-        << " 6. Generacion de Nomina" << endl
-        << " 7. Finalizar el Programa\n  R - ";
+    cout<< "\n\n\t\t\t  1. Empleados" << endl
+        << "\t\t\t  2. Puestos" << endl
+        << "\t\t\t  3. Departamentos" << endl
+        << "\t\t\t  4. Impuestos" << endl
+        << "\t\t\t  5. Empresas" << endl
+        << "\t\t\t  6. Generacion de Nomina" << endl
+        << "\t\t\t  7. Finalizar el Programa" << endl
+        <<"\n\t\t\t---------------------------------"<<endl
+        << "\n\t\t\tIngrese su opcion: ";
    int opcionMenu;
    cin >> opcionMenu;
 

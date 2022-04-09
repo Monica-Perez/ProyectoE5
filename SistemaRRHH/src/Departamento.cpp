@@ -75,18 +75,20 @@ Departamento::Departamento()
 int opcionDepa(){
     //system("cls");
 
+    cout<<"\n\t\t\t---------------------------------"<<endl;
     cout<<"\t\t\t\t------------------"<<endl;
 	cout<<"\t\t\t\t|  DEPARTAMENTOS  |"<<endl;
 	cout<<"\t\t\t\t------------------"<<endl;
 
 
-    cout<< "\nEscriba su opcion" << endl
-        << " 1. Guardar archivo de texto para Imprimirlo" << endl
-        << " 2. Agregar Empleado" << endl
-        << " 3. Modificar Empleado" << endl
-        << " 4. Eliminar Empleado" << endl
-        << " 5. Mostrar Lista de Empleados" << endl
-        << " 6. Finalizar el programa\n  R- ";
+    cout<< "\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
+        << "\t\t\t 2. Agregar Empleado" << endl
+        << "\t\t\t 3. Modificar Empleado" << endl
+        << "\t\t\t 4. Eliminar Empleado" << endl
+        << "\t\t\t 5. Mostrar Lista de Empleados" << endl
+        << "\t\t\t 6. Regresar al Menu Principal" << endl
+        << "\n\t\t\t---------------------------------"<<endl
+        << "\n\t\t\tIngrese su opcion: ";
 
     int opciionMenu;
     cin >> opciionMenu;

@@ -93,13 +93,17 @@
 
 1649472388 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\departamento.h
 
-1649029387 source:c:\users\monica pérez\desktop\sistemarrhh\src\departamento.cpp
+1649480509 source:c:\users\monica pérez\desktop\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
+	"DatosDepartamento.h"
 	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
 
 1649029387 c:\users\monica pérez\desktop\sistemarrhh\include\departamento.h
 
-1649387106 source:c:\users\monica pérez\desktop\sistemarrhh\src\empleado.cpp
+1649538176 source:c:\users\monica pérez\desktop\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	"DatosEmpleado.h"
 	<iostream>
@@ -110,7 +114,7 @@
 1649387106 c:\users\monica pérez\desktop\sistemarrhh\include\empleado.h
 	<iostream>
 
-1649454361 source:c:\users\monica pérez\desktop\sistemarrhh\src\puestos.cpp
+1649543613 source:c:\users\monica pérez\desktop\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
@@ -137,7 +141,7 @@
 
 1649040018 c:\users\monica pérez\desktop\sistemarrhh\include\nomina.h
 
-1649456181 source:c:\users\monica pérez\desktop\sistemarrhh\main.cpp
+1649482039 source:c:\users\monica pérez\desktop\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -368,7 +372,7 @@
 1649454360 c:\users\monica pérez\desktop\sistemarrhh\include\datospuestos.h
 	<iostream>
 
-1649387106 source:c:\users\monica pérez\desktop\sistemarrhh\src\empresas.cpp
+1649543585 source:c:\users\monica pérez\desktop\sistemarrhh\src\empresas.cpp
 	"Empresas.h"
 	"DatosEmpresas.h"
 	<iostream>
@@ -376,18 +380,18 @@
 	<iomanip>
 	<cstdlib>
 
-1649454699 c:\users\monica pérez\desktop\sistemarrhh\include\usuarios.h
+1649470449 c:\users\monica pérez\desktop\sistemarrhh\include\usuarios.h
 
-1649456305 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosusuario.cpp
+1649470449 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosusuario.cpp
 	"DatosUsuario.h"
 	"Usuarios.h"
 	<cstring>
 	<iostream>
 
-1649456254 c:\users\monica pérez\desktop\sistemarrhh\include\datosusuario.h
+1649470449 c:\users\monica pérez\desktop\sistemarrhh\include\datosusuario.h
 	<iostream>
 
-1649458737 source:c:\users\monica pérez\desktop\sistemarrhh\src\usuarios.cpp
+1649543253 source:c:\users\monica pérez\desktop\sistemarrhh\src\usuarios.cpp
 	"Usuarios.h"
 	"DatosUsuario.h"
 	<iostream>
@@ -633,4 +637,15 @@
 	<fstream>
 	<iomanip>
 	<cstdlib>
+
+1649480509 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosdepartamento.cpp
+	"DatosDepartamento.h"
+	"Departamentos.h"
+	<cstring>
+	<iostream>
+
+1649480509 c:\users\monica pérez\desktop\sistemarrhh\include\datosdepartamento.h
+	<iostream>
+
+1649016195 c:\users\monica pérez\desktop\sistemarrhh\include\departamentos.h
 

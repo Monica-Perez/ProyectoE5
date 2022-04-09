@@ -2,14 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="include\DatosEmpleado.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Usuarios.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="130" topLine="1" />
+			<Cursor1 position="5791" topLine="150" />
 		</Cursor>
 	</File>
-	<File name="include\Puestos.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Puestos.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="2211" topLine="72" />
 		</Cursor>
 	</File>
 	<File name="include\Empleado.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,29 +17,38 @@
 			<Cursor1 position="81" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="src\DatosEmpleado.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="284" topLine="0" />
+			<Cursor1 position="420" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\DatosEmpresas.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="505" topLine="0" />
+			<Cursor1 position="1782" topLine="19" />
 		</Cursor>
 	</File>
-	<File name="src\Empleado.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\DatosEmpleado.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="259" topLine="0" />
+			<Cursor1 position="130" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="src\Empleado.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2601" topLine="65" />
 		</Cursor>
 		<Folding>
-			<Collapse line="74" />
-			<Collapse line="94" />
-			<Collapse line="117" />
-			<Collapse line="137" />
-			<Collapse line="172" />
-			<Collapse line="189" />
-			<Collapse line="263" />
-			<Collapse line="287" />
+			<Collapse line="95" />
+			<Collapse line="118" />
+			<Collapse line="127" />
+			<Collapse line="138" />
+			<Collapse line="173" />
+			<Collapse line="185" />
+			<Collapse line="190" />
+			<Collapse line="264" />
+			<Collapse line="282" />
+			<Collapse line="288" />
+			<Collapse line="303" />
+			<Collapse line="317" />
 		</Folding>
 	</File>
 	<File name="src\Departamento.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,14 +56,14 @@
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Puestos.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Puestos.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\DatosEmpleado.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\DatosEmpresas.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="420" topLine="0" />
+			<Cursor1 position="505" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
