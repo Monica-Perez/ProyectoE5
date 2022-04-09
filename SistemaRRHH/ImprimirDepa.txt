@@ -1,0 +1,2 @@
+Codigo    NombreDepartamento      Area
+1         Finanzas        Administr    
