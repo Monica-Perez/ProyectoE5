@@ -5,6 +5,7 @@
 #include "Impuestos.h"
 #include "Empresas.h"
 #include "Nomina.h"
+#include "Usuarios.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ enum Opciones { empleados = 1, puestos, departamentos, impuestos, empresas, nomi
 
 int main()
 {
+    Usuarios claseusuarios;
     int opcion=0;
     while (( opcion = escribirOpcion() ) != FIN)
     {
