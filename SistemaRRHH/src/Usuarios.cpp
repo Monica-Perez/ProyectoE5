@@ -163,28 +163,41 @@ int obtenerncontra( const char * const indicador )
    return contra;
 
 }
-
-
 void modificarRegistroUs( fstream &verificarArchivoUsuario )
 {
-    DatosUsuario usuarioos;
-    int usuario = obtenernUsuario( "\nEscriba su Usuario" );
-    int contra = obtenerncontra("\nEscriba su Contrasenia");
+    int contador=0;
+    bool ingresa = false;
+    do{
+        cout<<"\t\t\t----------------------------------------------------"<<endl;
+        cout<<"\t\t\t |   INICIO DE SESION - SISTEMA RECURSOS HUMANOS  |"<<endl;
+        cout<<"\t\t\t----------------------------------------------------"<<endl;
 
-    verificarArchivoUsuario.seekg(( usuario - 1 ) * sizeof( DatosUsuario ));
-    verificarArchivoUsuario.read( reinterpret_cast< char * >( &usuarioos ), sizeof( DatosUsuario ) );
-    if (usuarioos.obtenerUsuario() != 0 )
-    {
-        if(usuario==usuarioos.obtenerUsuario()&&contra==usuarioos.obtenerContra())
+        DatosUsuario usuarioos;
+        int usuario = obtenernUsuario( "\n\t\t\tIngrese Usuario" );
+        int contra = obtenerncontra("\n\t\t\tIngrese Contrasena");
+
+        verificarArchivoUsuario.seekg(( usuario - 1 ) * sizeof( DatosUsuario ));
+        verificarArchivoUsuario.read( reinterpret_cast< char * >( &usuarioos ), sizeof( DatosUsuario ) );
+
+        if(usuario==usuarioos.obtenerUsuario() && contra==usuarioos.obtenerContra())
         {
-            cout<<"Inicio de sesion exitoso";
-
+            ingresa = true;
         }
-        else{cout<<"\nUsuario o contrasenia invalidos\n"; exit(1);}
+        else{
+            cout<<"\n\t\t\tUsuario o Contrasena Incorrectos\n\n";
+            contador ++;
+        }
+    }while( ingresa == false && contador < 3);
+
+    if( ingresa == false){
+        cout<<"\t\t\tIntentos Agotados...\n"<<endl;
+        exit(1);
+    }else{
+        cout<<"\n\t\t\tBienvenido al Sistema, Inicio de sesion Exitoso...";
+        getch();
     }
 
 }
-
 
 Usuarios::~Usuarios()
 {

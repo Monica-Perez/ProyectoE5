@@ -22,10 +22,10 @@ enum Optios { imprim = 1, nuevo = 2, leer, eliminar, editar, regresar};
 
 Puestos::Puestos()
 {
-    //ctor
-    cout<<"\t\t\t\t------------------"<<endl;
+    cout<<"\n\t\t\t---------------------------------"<<endl;
+    cout<<"\t\t\t\t----------------"<<endl;
 	cout<<"\t\t\t\t |   PUESTOS  |"<<endl;
-	cout<<"\t\t\t\t------------------"<<endl;
+	cout<<"\t\t\t\t----------------"<<endl;
 
 	fstream puestoEntradaSalida( "puest.dat", ios::in | ios::out | ios::binary);
     if ( !puestoEntradaSalida ) {
@@ -76,18 +76,18 @@ Puestos::Puestos()
 
 int Puestos::escribirOption()
 {
-   // mostrar opciones disponibles
-   cout<<"\t\t\t---------------------------------"<<endl;
-	cout<<"\t\t\t |   Módulo de puestos  |"<<endl;
-	cout<<"\t\t\t---------------------------------"<<endl;
+    cout<<"\n\t\t\t   --------------------------"<<endl;
+	cout<<"\t\t\t    |   Modulo de Puestos  |"<<endl;
+	cout<<"\t\t\t   --------------------------"<<endl;
 
-    cout << "\nEscriba su opcion" << endl
-        << "1 - crear un archivo de texto para imprimir" << endl
-        << "2 - crear un nuevo puesto de trabajo" << endl
-        << "3 - ver los puestos de trabajo" << endl
-        << "4 - eliminar puesto de trabajo" << endl
-        << "5 - editar puesto de trabajo" << endl
-        << "6 - Regresar al menu principal\n R - ";
+    cout<< "\n\n\t\t\t 1. Crear un archivo de texto para imprimir" << endl
+        << "\t\t\t 2. Crear un nuevo puesto de trabajo" << endl
+        << "\t\t\t 3. Ver los puestos de trabajo" << endl
+        << "\t\t\t 4. Eliminar puesto de trabajo" << endl
+        << "\t\t\t 5. Editar puesto de trabajo" << endl
+        << "\t\t\t 6. Regresar al Menu Principal" << endl
+        << "\n\t\t\t---------------------------------"<<endl
+        << "\n\t\t\tIngrese su opcion: ";
    int opcionMenuP;
    cin >> opcionMenuP; // recibir opción del usuario
 
