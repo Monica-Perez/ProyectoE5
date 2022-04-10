@@ -258,7 +258,7 @@ void eliminarRegistroPuesto( fstream &eliminarDeArchivo )
 
 void consultarRegistroPuesto( fstream &leerDeArchivoP )
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << "Estatus" << setw( 14 ) << " Nombre" << endl;
     leerDeArchivoP.seekg( 0 );
     datosPuestos puestos;
     leerDeArchivoP.read( reinterpret_cast< char * >( &puestos ), sizeof( datosPuestos ) );

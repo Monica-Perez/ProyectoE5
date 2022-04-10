@@ -235,7 +235,7 @@ void modificarRegistroImp( fstream &actualizarArchivo )
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroImp( fstream &eliminarDeArchivo )
 {
-    int codigo = obtenernCodigoImp( "\nEscriba el codigo del Empleado a Eliminar" );
+    int codigo = obtenernCodigoImp( "\nEscriba el codigo del Impuesto a Eliminar" );
     eliminarDeArchivo.seekg( ( codigo - 1 ) * sizeof( datosimpuestos ) );
     datosimpuestos impuestos;
     eliminarDeArchivo.read( reinterpret_cast< char * >( &impuestos ), sizeof( datosimpuestos ) );
