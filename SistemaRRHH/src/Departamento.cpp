@@ -148,9 +148,9 @@ void nuevoRegistroDepa( fstream &insertarEnArchivo )
         char apellido[ 15 ];
         char nombre[ 10 ];
 
-        cout<<"Escriba el Nombre del departamento del Empleado: ";
+        cout<<"Escriba el Nombre del departamento: ";
         cin>> setw( 15 ) >> apellido;
-        cout<<"Escriba el Nombre el area del empleado: ";
+        cout<<"Escriba el Nombre el area: ";
         cin>> setw( 10 ) >> nombre;
 
         departamentos.establecerApellido( apellido );
@@ -159,11 +159,11 @@ void nuevoRegistroDepa( fstream &insertarEnArchivo )
 
         insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosDepartamento ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &departamentos ), sizeof( DatosDepartamento ) );
-        cout<<"\n Empleado agregado Exitosamente..."<<endl;
+        cout<<"\n Departamento agregado Exitosamente..."<<endl;
 
     } //FIN IF
     else
-        cerr << "El Empleado con codigo #" << codigo << " ya contiene informacion.\n" << endl;
+        cerr << "El Departamento con codigo #" << codigo << " ya contiene informacion.\n" << endl;
 
 } //FIN REGISTRO
 int obtenernCodigoDepa( const char * const indicador )
@@ -207,7 +207,7 @@ void modificarRegistroDepa( fstream &actualizarArchivo )
             actualizarArchivo.write(reinterpret_cast< const char * >( &departamentos ), sizeof( DatosDepartamento ) );
         }
     }else if(opcionAc == 2){
-        int codigo = obtenernCodigoDepa( "Escriba el codigo del Empleado que desea Modifcar" );
+        int codigo = obtenernCodigoDepa( "Escriba el codigo del Departamento que desea Modifcar" );
 
         actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosDepartamento ));
 
@@ -233,7 +233,7 @@ void modificarRegistroDepa( fstream &actualizarArchivo )
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroDepa( fstream &eliminarDeArchivo )
 {
-    int codigo = obtenernCodigoDepa( "\nEscriba el codigo del Empleado a Eliminar" );
+    int codigo = obtenernCodigoDepa( "\nEscriba el codigo del Departamento a Eliminar" );
     eliminarDeArchivo.seekg( ( codigo - 1 ) * sizeof( DatosDepartamento ) );
     DatosDepartamento departamentos;
     eliminarDeArchivo.read( reinterpret_cast< char * >( &departamentos ), sizeof( DatosDepartamento ) );
