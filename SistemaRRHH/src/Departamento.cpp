@@ -82,10 +82,10 @@ int opcionDepa(){
 
 
     cout<< "\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
-        << "\t\t\t 2. Agregar Empleado" << endl
-        << "\t\t\t 3. Modificar Empleado" << endl
-        << "\t\t\t 4. Eliminar Empleado" << endl
-        << "\t\t\t 5. Mostrar Lista de Empleados" << endl
+        << "\t\t\t 2. Agregar Departamento" << endl
+        << "\t\t\t 3. Modificar Departamento" << endl
+        << "\t\t\t 4. Eliminar Departamento" << endl
+        << "\t\t\t 5. Mostrar Lista Departamento" << endl
         << "\t\t\t 6. Regresar al Menu Principal" << endl
         << "\n\t\t\t---------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
