@@ -56,6 +56,7 @@ int main()
 
 int escribirOpcion(){
     system("cls");
+    system("color F");
     cout<<"\t\t\t---------------------------------"<<endl;
 	cout<<"\t\t\t |   SISTEMA RECURSOS HUMANOS  |"<<endl;
 	cout<<"\t\t\t---------------------------------"<<endl;

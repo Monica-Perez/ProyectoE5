@@ -193,6 +193,7 @@ void modificarRegistroUs( fstream &verificarArchivoUsuario )
         cout<<"\t\t\tIntentos Agotados...\n"<<endl;
         exit(1);
     }else{
+        system("color a");
         cout<<"\n\t\t\tBienvenido al Sistema, Inicio de sesion Exitoso...";
         getch();
     }
