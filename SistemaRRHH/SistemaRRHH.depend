@@ -93,7 +93,7 @@
 
 1649546757 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\departamento.h
 
-1649480509 source:c:\users\monica pérez\desktop\sistemarrhh\src\departamento.cpp
+1649575662 source:c:\users\monica pérez\desktop\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
 	"DatosDepartamento.h"
 	<iostream>
@@ -103,7 +103,7 @@
 
 1649029387 c:\users\monica pérez\desktop\sistemarrhh\include\departamento.h
 
-1649538176 source:c:\users\monica pérez\desktop\sistemarrhh\src\empleado.cpp
+1649544701 source:c:\users\monica pérez\desktop\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	"DatosEmpleado.h"
 	<iostream>
@@ -114,7 +114,7 @@
 1649387106 c:\users\monica pérez\desktop\sistemarrhh\include\empleado.h
 	<iostream>
 
-1649543613 source:c:\users\monica pérez\desktop\sistemarrhh\src\puestos.cpp
+1649575662 source:c:\users\monica pérez\desktop\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
@@ -129,9 +129,13 @@
 	<cstdlib>
 	<iostream>
 
-1649040018 source:c:\users\monica pérez\desktop\sistemarrhh\src\impuestos.cpp
+1649575662 source:c:\users\monica pérez\desktop\sistemarrhh\src\impuestos.cpp
 	"Impuestos.h"
 	<iostream>
+	"datosimpuestos.h"
+	<fstream>
+	<iomanip>
+	<cstdlib>
 
 1649040018 c:\users\monica pérez\desktop\sistemarrhh\include\impuestos.h
 
@@ -139,9 +143,9 @@
 	"Nomina.h"
 	<iostream>
 
-1649040018 c:\users\monica pérez\desktop\sistemarrhh\include\nomina.h
+1652392275 c:\users\monica pérez\desktop\sistemarrhh\include\nomina.h
 
-1649482039 source:c:\users\monica pérez\desktop\sistemarrhh\main.cpp
+1652392487 source:c:\users\monica pérez\desktop\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -150,6 +154,7 @@
 	"Empresas.h"
 	"Nomina.h"
 	"Usuarios.h"
+	"Nomina.h"
 
 1649387106 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosempleado.cpp
 	"DatosEmpleado.h"
@@ -380,7 +385,7 @@
 1649454360 c:\users\monica pérez\desktop\sistemarrhh\include\datospuestos.h
 	<iostream>
 
-1649543585 source:c:\users\monica pérez\desktop\sistemarrhh\src\empresas.cpp
+1649544701 source:c:\users\monica pérez\desktop\sistemarrhh\src\empresas.cpp
 	"Empresas.h"
 	"DatosEmpresas.h"
 	<iostream>
@@ -399,7 +404,7 @@
 1649470449 c:\users\monica pérez\desktop\sistemarrhh\include\datosusuario.h
 	<iostream>
 
-1649543253 source:c:\users\monica pérez\desktop\sistemarrhh\src\usuarios.cpp
+1652392057 source:c:\users\monica pérez\desktop\sistemarrhh\src\usuarios.cpp
 	"Usuarios.h"
 	"DatosUsuario.h"
 	<iostream>
@@ -830,5 +835,14 @@
 	<iostream>
 
 1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosimpuestos.h
+	<iostream>
+
+1649546393 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosimpuestos.cpp
+	"datosimpuestos.h"
+	"Impuestos.h"
+	<cstring>
+	<iostream>
+
+1649546393 c:\users\monica pérez\desktop\sistemarrhh\include\datosimpuestos.h
 	<iostream>
 
