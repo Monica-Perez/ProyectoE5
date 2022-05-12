@@ -6,6 +6,7 @@
 #include "Empresas.h"
 #include "Nomina.h"
 #include "Usuarios.h"
+#include "Nomina.h"
 
 using namespace std;
 
