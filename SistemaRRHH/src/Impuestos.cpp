@@ -78,9 +78,9 @@ Impuestos::Impuestos()
 int opcionImp(){
     //system("cls");
     cout<<"\n\t\t\t---------------------------------"<<endl;
-    cout<<"\t\t\t\t------------------"<<endl;
-	cout<<"\t\t\t\t|  IMPUESTOS  |"<<endl;
-	cout<<"\t\t\t\t------------------"<<endl;
+    cout<<"\t\t\t\t-----------------"<<endl;
+	cout<<"\t\t\t\t |  IMPUESTOS  |"<<endl;
+	cout<<"\t\t\t\t-----------------"<<endl;
 
 
     cout<< "\n\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
