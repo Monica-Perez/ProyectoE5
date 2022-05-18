@@ -720,13 +720,13 @@
 
 1652834379 c:\users\abiva\desktop\sistemarrhh\include\usuarios.h
 
-1652834380 source:c:\users\abiva\desktop\sistemarrhh\src\datosdepartamento.cpp
+1652907804 source:c:\users\abiva\desktop\sistemarrhh\src\datosdepartamento.cpp
 	"DatosDepartamento.h"
 	"Departamentos.h"
 	<cstring>
 	<iostream>
 
-1652834379 c:\users\abiva\desktop\sistemarrhh\include\datosdepartamento.h
+1652907804 c:\users\abiva\desktop\sistemarrhh\include\datosdepartamento.h
 	<iostream>
 
 1652834379 c:\users\abiva\desktop\sistemarrhh\include\departamentos.h
@@ -779,7 +779,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652839951 source:c:\users\abiva\desktop\sistemarrhh\src\empleado.cpp
+1652907804 source:c:\users\abiva\desktop\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	"DatosEmpleado.h"
 	<iostream>
@@ -789,7 +789,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652834380 source:c:\users\abiva\desktop\sistemarrhh\src\empresas.cpp
+1652907804 source:c:\users\abiva\desktop\sistemarrhh\src\empresas.cpp
 	"Empresas.h"
 	"DatosEmpresas.h"
 	<iostream>
@@ -809,7 +809,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652834380 source:c:\users\abiva\desktop\sistemarrhh\src\nomina.cpp
+1652907804 source:c:\users\abiva\desktop\sistemarrhh\src\nomina.cpp
 	"Nomina.h"
 	"DatosEmpleado.h"
 	"datosPuestos.h"
@@ -821,7 +821,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652839050 source:c:\users\abiva\desktop\sistemarrhh\src\puestos.cpp
+1652907804 source:c:\users\abiva\desktop\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
