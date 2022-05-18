@@ -1,2 +1,3 @@
-Codigo    NombreDepartamento      Area
-1         Finanzas        Administr    
+Codigo    NombreDepartamento                Area
+1         Finanzas        Administr          
+2         Finanzas        Contabili          

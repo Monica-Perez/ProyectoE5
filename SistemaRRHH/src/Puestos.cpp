@@ -80,6 +80,7 @@ Puestos::Puestos()
 int Puestos::escribirOption()
 {
 
+ system("cls");
 time_t now = time(0);
         tm * time = localtime(&now);
 
@@ -154,6 +155,9 @@ void imprimirRegistroPuesto( fstream &leerDeArchivoP )
         leerDeArchivoP.read( reinterpret_cast< char * >( &puestos ), sizeof( datosPuestos ) );
     } //FIN DE WHILE
 cout << "archivo creado exitosamente"<<endl;
+
+  cout<<"\n";
+ system("pause");
 }
 
 void mostrarLineaP( ostream &salida, const datosPuestos &registro )
@@ -174,6 +178,8 @@ void crearArchivoPuesto()
     datosPuestos puestoEnBlanco;
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &puestoEnBlanco ), sizeof( datosPuestos ) );
+        cout<<"\n";
+ system("pause");
 }
 
 void nuevoRegistroPuesto( fstream &insertarEnArchivo )
@@ -202,7 +208,8 @@ void nuevoRegistroPuesto( fstream &insertarEnArchivo )
     } //FIN IF
     else
         cerr << "El Puesto con codigo #" << codigoP << " ya contiene informacion.\n" << endl;
-
+  cout<<"\n";
+ system("pause");
 }
 
 int obtenernCodigoPuesto( const char * const indicador )
@@ -269,7 +276,8 @@ void modificarRegistroPuesto( fstream &actualizarArchivo )
                 actualizarArchivo.write(reinterpret_cast< const char * >( &puestos ), sizeof( datosPuestos ) );
         }
     }
-
+  cout<<"\n";
+ system("pause");
 } //FIN DE -ACTUALIZAR REGISTRO-
 
 void eliminarRegistroPuesto( fstream &eliminarDeArchivo )
@@ -292,6 +300,8 @@ void eliminarRegistroPuesto( fstream &eliminarDeArchivo )
    else
       cerr << "El codigo #" << codigoP << " esta vacia.\n";
 
+cout<<"\n";
+ system("pause");
 } //FIN -ELIMINARREGISTRO-
 
 void consultarRegistroPuesto( fstream &leerDeArchivoP )
@@ -306,7 +316,8 @@ void consultarRegistroPuesto( fstream &leerDeArchivoP )
             leerDeArchivoP.read( reinterpret_cast< char * >( &puestos ), sizeof( datosPuestos ) );
 
    } //FIN WHILE
-
+   cout<<"\n";
+ system("pause");
 } //FIN CONSULTAR REGISTRO
 
 void mostrarLineaPantallaP( const datosPuestos &registro )

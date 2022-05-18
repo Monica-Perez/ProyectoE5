@@ -76,7 +76,7 @@ Departamento::Departamento()
 
 }
 int opcionDepa(){
-    //system("cls");
+    system("cls");
 
     time_t now = time(0);
         tm * time = localtime(&now);
@@ -153,7 +153,8 @@ void imprimirRegistroDepa( fstream &leerDeArchivo )
         mostrarLineaDepa( archivoImprimirSalida, departamentos );
         leerDeArchivo.read( reinterpret_cast< char * >( &departamentos ), sizeof( DatosDepartamento ) );
     } //FIN DE WHILE
-
+         cout<<"\n";
+ system("pause");
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
 void mostrarLineaDepa( ostream &salida, const DatosDepartamento &registro )
 {
@@ -174,6 +175,8 @@ void crearArchivoCreditoDepa()
     DatosDepartamento empleadoEnBlanco;
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &empleadoEnBlanco ), sizeof( DatosDepartamento ) );
+          cout<<"\n";
+ system("pause");
 }
 void nuevoRegistroDepa( fstream &insertarEnArchivo )
 {
@@ -203,6 +206,8 @@ void nuevoRegistroDepa( fstream &insertarEnArchivo )
     else
         cerr << "El Departamento con codigo #" << codigo << " ya contiene informacion.\n" << endl;
 
+cout<<"\n";
+ system("pause");
 } //FIN REGISTRO
 int obtenernCodigoDepa( const char * const indicador )
 {
@@ -267,7 +272,8 @@ void modificarRegistroDepa( fstream &actualizarArchivo )
                 actualizarArchivo.write(reinterpret_cast< const char * >( &departamentos ), sizeof( DatosDepartamento ) );
         }
     }
-
+  cout<<"\n";
+ system("pause");
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroDepa( fstream &eliminarDeArchivo )
 {
@@ -289,6 +295,8 @@ void eliminarRegistroDepa( fstream &eliminarDeArchivo )
    else
       cerr << "La cuenta #" << codigo << " esta vacia.\n";
 
+        cout<<"\n";
+ system("pause");
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroDepa( fstream &leerDeArchivo )
 {
@@ -302,7 +310,8 @@ void consultarRegistroDepa( fstream &leerDeArchivo )
             leerDeArchivo.read( reinterpret_cast< char * >( &departamentos ), sizeof( DatosDepartamento ) );
 
    } //FIN WHILE
-
+  cout<<"\n";
+ system("pause");
 } //FIN CONSULTAR REGISTRO
 void mostrarLineaPantallaDepa( const DatosDepartamento &registro )
 {
