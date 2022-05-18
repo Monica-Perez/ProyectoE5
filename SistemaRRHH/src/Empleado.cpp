@@ -76,7 +76,7 @@ Empleado::Empleado()
    } //FIN WHILE
 }
 int opcionEmp(){
-
+system("cls");
 
      time_t now = time(0);
         tm * time = localtime(&now);
@@ -153,7 +153,8 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
         mostrarLineaEmp( archivoImprimirSalida, empleados );
         leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
     } //FIN DE WHILE
-
+cout<<"\n";
+ system("pause");
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
 void mostrarLineaEmp( ostream &salida, const DatosEmpleado &registro )
 {
@@ -174,6 +175,8 @@ void crearArchivoCreditoEmp()
     DatosEmpleado empleadoEnBlanco;
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &empleadoEnBlanco ), sizeof( DatosEmpleado ) );
+cout<<"\n";
+ system("pause");
 }
 void nuevoRegistroEmp( fstream &insertarEnArchivo )
 {
@@ -208,7 +211,8 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo )
     } //FIN IF
     else
         cerr << "El Empleado con codigo #" << codigo << " ya contiene informacion.\n" << endl;
-
+cout<<"\n";
+ system("pause");
 } //FIN REGISTRO
 int obtenernCodigoEmp( const char * const indicador )
 {
@@ -317,7 +321,8 @@ void modificarRegistroEmp( fstream &actualizarArchivo )
                 actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
         }
     }
-
+cout<<"\n";
+ system("pause");
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroEmp( fstream &eliminarDeArchivo )
 {
@@ -338,7 +343,8 @@ void eliminarRegistroEmp( fstream &eliminarDeArchivo )
    //ERROR SI NO EXISTE
    else
       cerr << "La cuenta #" << codigo << " esta vacia.\n";
-
+cout<<"\n";
+ system("pause");
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroEmp( fstream &leerDeArchivo )
 {
@@ -352,7 +358,8 @@ void consultarRegistroEmp( fstream &leerDeArchivo )
             leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
 
    } //FIN WHILE
-
+cout<<"\n";
+ system("pause");
 } //FIN CONSULTAR REGISTRO
 void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
 {

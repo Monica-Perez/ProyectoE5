@@ -75,7 +75,7 @@ Empresas::Empresas()
    } //FIN WHILE
 }
 int opcionEmpre(){
-    //system("cls");
+    system("cls");
 
     time_t now = time(0);
         tm * time = localtime(&now);
@@ -151,7 +151,8 @@ void imprimirRegistroEmpre( fstream &leerDeArchivo )
         mostrarLineaEmpre( archivoImprimirSalida, empresas );
         leerDeArchivo.read( reinterpret_cast< char * >( &empresas ), sizeof( DatosEmpresas ) );
     } //FIN DE WHILE
-
+cout<<"\n";
+ system("pause");
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
 void mostrarLineaEmpre( ostream &salida, const DatosEmpresas &registro )
 {
@@ -170,6 +171,8 @@ void crearArchivoCreditoEmpre()
     DatosEmpresas empresaEnBlanco;
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &empresaEnBlanco ), sizeof( DatosEmpresas ) );
+cout<<"\n";
+ system("pause");
 }
 void nuevoRegistroEmpre( fstream &insertarEnArchivo )
 {
@@ -196,6 +199,8 @@ void nuevoRegistroEmpre( fstream &insertarEnArchivo )
     } //FIN IF
     else
         cerr << "El Empresas con codigo #" << codigo << " ya contiene informacion.\n" << endl;
+cout<<"\n";
+ system("pause");
 }
 int obtenerCodigoEmpre( const char * const indicador )
 {
@@ -260,7 +265,8 @@ void modificarRegistroEmpre( fstream &actualizarArchivo )
                 cout << "\nCelular Modificado Exitosamente...";
         }
     }
-
+cout<<"\n";
+ system("pause");
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroEmpre( fstream &eliminarDeArchivo )
 {
@@ -281,7 +287,8 @@ void eliminarRegistroEmpre( fstream &eliminarDeArchivo )
    //ERROR SI NO EXISTE
    else
       cerr << "La cuenta #" << codigo << " esta vacia.\n";
-
+cout<<"\n";
+ system("pause");
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroEmpre( fstream &leerDeArchivo )
 {
@@ -295,7 +302,8 @@ void consultarRegistroEmpre( fstream &leerDeArchivo )
             leerDeArchivo.read( reinterpret_cast< char * >( &empresas ), sizeof( DatosEmpresas ) );
 
    } //FIN WHILE
-
+cout<<"\n";
+ system("pause");
 } //FIN CONSULTAR REGISTRO
 void mostrarLineaPantallaEmpre( const DatosEmpresas &registro )
 {
