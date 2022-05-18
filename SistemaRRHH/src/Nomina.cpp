@@ -1,6 +1,8 @@
 #include "Nomina.h"
 #include "DatosEmpleado.h"
 #include "datosPuestos.h"
+#include "DatosDepartamento.h"
+
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -25,8 +27,8 @@ using std::setw;
 using std::setprecision;
 #include <cstdlib>
 
-void consultarRegistroPla( fstream& , fstream& );
-void mostrarLineaPantallaPla( const DatosEmpleado &, const datosPuestos &);
+void consultarRegistroPla( fstream& , fstream& , fstream&);
+void mostrarLineaPantallaPla( const DatosEmpleado &, const datosPuestos &, const DatosDepartamento &);
 
 using namespace std;
 
@@ -74,36 +76,42 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
     fstream creditoEntradaSalida( "emp.dat", ios::in | ios::out | ios::binary);
     fstream creditoEntradaSalida2( "puest.dat", ios::in | ios::out | ios::binary);
+    fstream creditoEntradaSalida3( "DEPARTAMENTOS.dat", ios::in | ios::out | ios::binary);
 
-    if ( !creditoEntradaSalida && !creditoEntradaSalida2) {
+
+    if ( !creditoEntradaSalida && !creditoEntradaSalida2 && !creditoEntradaSalida3) {
         cerr << "No se pudo abrir el archivo." << endl;
     }
-    consultarRegistroPla( creditoEntradaSalida, creditoEntradaSalida2 );
+    consultarRegistroPla( creditoEntradaSalida, creditoEntradaSalida2 , creditoEntradaSalida3);
 }
 
-void consultarRegistroPla( fstream &leerDeArchivo, fstream &leer2 )
+void consultarRegistroPla( fstream &leerDeArchivo, fstream &leer2 , fstream &leer3)
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 15 ) << " Nombre" << setw( 12 ) << "Puesto" <<  setw( 10 ) << " Sueldo" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 15 ) << " Nombre"  << setw( 14 ) << "Departamento" << setw( 12 ) << "Puesto" <<  setw( 10 ) << " Sueldo" << endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     datosPuestos puestos;
+    DatosDepartamento Departamentos;
     leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
     leer2.read( reinterpret_cast< char * >( &puestos ), sizeof( datosPuestos ) );
+    leer3.read (reinterpret_cast< char * >( &Departamentos ), sizeof( DatosDepartamento ) );
     while ( !leerDeArchivo.eof() ) {
         if ( empleados.obtenerCodigo() != 0 )
-            mostrarLineaPantallaPla(empleados,puestos);
+            mostrarLineaPantallaPla(empleados,puestos,Departamentos);
             leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
             leer2.read( reinterpret_cast< char * >( &puestos ), sizeof( datosPuestos ) );
+            leer3.read (reinterpret_cast< char * >( &Departamentos ), sizeof( DatosDepartamento ) );
    } //FIN WHILE
    cout<<endl;
    system("pause");
 } //FIN CONSULTAR REGISTRO
 
-void mostrarLineaPantallaPla( const DatosEmpleado &registro, const datosPuestos &regpu )
+void mostrarLineaPantallaPla( const DatosEmpleado &registro, const datosPuestos &regpu , const DatosDepartamento &regdep)
 {
    cout << left <<" "<< setw( 10 ) << registro.obtenerCodigo()
           << setw( 16 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
+           << setw( 14 ) << regdep.obtenerApellido().data()
           << setw( 12 ) << regpu.obtenerNombre().data()
           << setw( 10 ) << setprecision( 3 ) << right << fixed
           << showpoint << registro.obtenerSueldo() << endl;

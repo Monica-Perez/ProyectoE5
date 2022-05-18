@@ -851,7 +851,7 @@
 1649546393 c:\users\monica pérez\desktop\sistemarrhh\include\datosimpuestos.h
 	<iostream>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\main.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -861,6 +861,8 @@
 	"Nomina.h"
 	"Usuarios.h"
 	"Nomina.h"
+	<ctime>
+	<vector>
 
 1652828310 c:\users\halld\proyectos\proyectoe5\sistemarrhh\include\empleado.h
 	<iostream>
@@ -939,48 +941,58 @@
 1652828310 c:\users\halld\proyectos\proyectoe5\sistemarrhh\include\datosusuario.h
 	<iostream>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\departamento.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
 	"DatosDepartamento.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\empleado.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	"DatosEmpleado.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\empresas.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\empresas.cpp
 	"Empresas.h"
 	"DatosEmpresas.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\impuestos.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\impuestos.cpp
 	"Impuestos.h"
 	<iostream>
 	"datosimpuestos.h"
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\nomina.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\nomina.cpp
 	"Nomina.h"
 	"DatosEmpleado.h"
 	"datosPuestos.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\puestos.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
@@ -988,18 +1000,22 @@
 	<iomanip>
 	<cstdlib>
 	<cstring>
+	<ctime>
+	<vector>
 
-1652828310 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\usuarios.cpp
+1652832343 source:c:\users\halld\proyectos\proyectoe5\sistemarrhh\src\usuarios.cpp
 	"Usuarios.h"
 	"DatosUsuario.h"
 	<iostream>
 	<cstdlib>
 	<conio.h>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652829710 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\main.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -1089,7 +1105,7 @@
 1652828310 c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\include\datosusuario.h
 	<iostream>
 
-1652830691 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\departamento.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
 	"DatosDepartamento.h"
 	<iostream>
@@ -1099,7 +1115,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652830414 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\empleado.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	"DatosEmpleado.h"
 	<iostream>
@@ -1109,7 +1125,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652830691 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\empresas.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\empresas.cpp
 	"Empresas.h"
 	"DatosEmpresas.h"
 	<iostream>
@@ -1119,7 +1135,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652830575 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\impuestos.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\impuestos.cpp
 	"Impuestos.h"
 	<iostream>
 	"datosimpuestos.h"
@@ -1129,10 +1145,11 @@
 	<iomanip>
 	<cstdlib>
 
-1652830691 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\nomina.cpp
+1652833306 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\nomina.cpp
 	"Nomina.h"
 	"DatosEmpleado.h"
 	"datosPuestos.h"
+	"DatosDepartamento.h"
 	<iostream>
 	<ctime>
 	<vector>
@@ -1140,7 +1157,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652830755 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\puestos.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
@@ -1151,7 +1168,7 @@
 	<ctime>
 	<vector>
 
-1652829075 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\usuarios.cpp
+1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\usuarios.cpp
 	"Usuarios.h"
 	"DatosUsuario.h"
 	<iostream>

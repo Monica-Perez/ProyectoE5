@@ -142,7 +142,7 @@ void imprimirRegistroDepa( fstream &leerDeArchivo )
 
     } //FIN DE INSTRUCCION if
 
-    archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "NombreDepartamento" << right << setw( 10 ) << "Area" << endl;
+    archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "NombreDepartamento" << right << setw( 20 ) << "Area" << endl;
     leerDeArchivo.seekg( 0 );
 
     DatosDepartamento departamentos;
@@ -159,7 +159,8 @@ void mostrarLineaDepa( ostream &salida, const DatosDepartamento &registro )
 {
    salida << left << setw( 10 ) << registro.obtenerCodigo()
           << setw( 16 ) << registro.obtenerApellido().data()
-          << setw( 14 ) << registro.obtenerNombre().data() << endl;
+          //Nombre es area
+          << setw( 20 ) << registro.obtenerNombre().data() << endl;
 
 
 }//FIN -MOSTRARLINEA-
@@ -183,12 +184,12 @@ void nuevoRegistroDepa( fstream &insertarEnArchivo )
 
     if ( departamentos.obtenerCodigo() == 0 ) {
         char apellido[ 15 ];
-        char nombre[ 10 ];
+        char nombre[ 20 ];
 
         cout<<"Escriba el Nombre del departamento: ";
         cin>> setw( 15 ) >> apellido;
         cout<<"Escriba el Nombre el area: ";
-        cin>> setw( 10 ) >> nombre;
+        cin>> setw( 20 ) >> nombre;
 
         departamentos.establecerApellido( apellido );
         departamentos.establecerNombre( nombre );
