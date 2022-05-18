@@ -93,7 +93,7 @@
 
 1649546757 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\departamento.h
 
-1652902135 source:c:\users\monica pérez\desktop\sistemarrhh\src\departamento.cpp
+1652911294 source:c:\users\monica pérez\desktop\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
 	"DatosDepartamento.h"
 	<iostream>
@@ -118,7 +118,7 @@
 1649387106 c:\users\monica pérez\desktop\sistemarrhh\include\empleado.h
 	<iostream>
 
-1652900828 source:c:\users\monica pérez\desktop\sistemarrhh\src\puestos.cpp
+1652903128 source:c:\users\monica pérez\desktop\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
@@ -135,7 +135,15 @@
 	<cstdlib>
 	<iostream>
 
-1652843999 source:c:\users\monica pérez\desktop\sistemarrhh\src\impuestos.cpp
+1652911146 source:c:\users\monica pérez\desktop\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+	"datosimpuestos.h"
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
 	"Impuestos.h"
 	<iostream>
 	"datosimpuestos.h"
@@ -147,7 +155,7 @@
 
 1649040018 c:\users\monica pérez\desktop\sistemarrhh\include\impuestos.h
 
-1652901630 source:c:\users\monica pérez\desktop\sistemarrhh\src\nomina.cpp
+1652903128 source:c:\users\monica pérez\desktop\sistemarrhh\src\nomina.cpp
 	"Nomina.h"
 	"DatosEmpleado.h"
 	"datosPuestos.h"
@@ -161,7 +169,7 @@
 
 1652392275 c:\users\monica pérez\desktop\sistemarrhh\include\nomina.h
 
-1652831178 source:c:\users\monica pérez\desktop\sistemarrhh\main.cpp
+1652913423 source:c:\users\monica pérez\desktop\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -171,16 +179,17 @@
 	"Nomina.h"
 	"Usuarios.h"
 	"Nomina.h"
+	"Conceptos.h"
 	<ctime>
 	<vector>
 
-1649387106 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosempleado.cpp
+1652913364 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosempleado.cpp
 	"DatosEmpleado.h"
 	"Empleado.h"
 	<cstring>
 	<iostream>
 
-1649387106 c:\users\monica pérez\desktop\sistemarrhh\include\datosempleado.h
+1652913520 c:\users\monica pérez\desktop\sistemarrhh\include\datosempleado.h
 	<iostream>
 
 1648939551 c:\users\monica pérez\desktop\progra i\sistemarrhh\include\puestos.h
@@ -677,13 +686,13 @@
 	<iomanip>
 	<cstdlib>
 
-1652902211 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosdepartamento.cpp
+1652903128 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosdepartamento.cpp
 	"DatosDepartamento.h"
 	"Departamentos.h"
 	<cstring>
 	<iostream>
 
-1652902135 c:\users\monica pérez\desktop\sistemarrhh\include\datosdepartamento.h
+1652903128 c:\users\monica pérez\desktop\sistemarrhh\include\datosdepartamento.h
 	<iostream>
 
 1649016195 c:\users\monica pérez\desktop\sistemarrhh\include\departamentos.h
@@ -1214,6 +1223,27 @@
 	<iostream>
 	<cstdlib>
 	<conio.h>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652911796 c:\users\monica pérez\desktop\sistemarrhh\include\conceptos.h
+
+1652915247 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1652915247 c:\users\monica pérez\desktop\sistemarrhh\include\datosconceptos.h
+	<iostream>
+
+1652915616 source:c:\users\monica pérez\desktop\sistemarrhh\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
 	<ctime>
 	<vector>
 	<fstream>
