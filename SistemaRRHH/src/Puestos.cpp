@@ -24,12 +24,6 @@ enum Optios { imprim = 1, nuevo = 2, leer, eliminar, editar, regresar};
 
 Puestos::Puestos()
 {
-
-    cout<<"\n\t\t\t---------------------------------"<<endl;
-    cout<<"\t\t\t\t----------------"<<endl;
-	cout<<"\t\t\t\t |   PUESTOS  |"<<endl;
-	cout<<"\t\t\t\t----------------"<<endl;
-
 	fstream puestoEntradaSalida( "puest.dat", ios::in | ios::out | ios::binary);
     if ( !puestoEntradaSalida ) {
         cerr << "No se pudo abrir el archivo." << endl;
@@ -75,8 +69,6 @@ Puestos::Puestos()
     }
 }
 
-
-
 int Puestos::escribirOption()
 {
 
@@ -115,7 +107,11 @@ cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
 cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
 cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
-    cout<<"\n\t\t\t   --------------------------"<<endl;
+    cout<<"\n\t\t\t---------------------------------"<<endl;
+    cout<<"\t\t\t\t----------------"<<endl;
+	cout<<"\t\t\t\t |   PUESTOS  |"<<endl;
+	cout<<"\t\t\t\t----------------"<<endl;
+    cout<<"\t\t\t   --------------------------"<<endl;
 	cout<<"\t\t\t    |   Modulo de Puestos  |"<<endl;
 	cout<<"\t\t\t   --------------------------"<<endl;
 
@@ -165,7 +161,6 @@ void mostrarLineaP( ostream &salida, const datosPuestos &registro )
    salida << left << setw( 10 ) << registro.obtenerCodigoP()
           << setw( 16 ) << registro.obtenerEstatus().data()
           << setw( 14 ) << registro.obtenerNombre().data()<< endl;
-
 }
 
 void crearArchivoPuesto()
@@ -191,11 +186,11 @@ void nuevoRegistroPuesto( fstream &insertarEnArchivo )
 
     if ( puestos.obtenerCodigoP() == 0 ) {
         char Estatus[ 15 ];
-        char nombreP[ 10 ];
+        char nombreP[ 15 ];
         cout<<"Escriba el Estatus del Puesto: ";
         cin>> setw( 15 ) >> Estatus;
         cout<<"Escriba el Nombre del Puesto: ";
-        cin>> setw( 10 ) >> nombreP;
+        cin>> setw( 15 ) >> nombreP;
 
         puestos.establecerEstatus( Estatus );
         puestos.establecerNombrePuestos( nombreP );
