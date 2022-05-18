@@ -1105,7 +1105,7 @@
 1652828310 c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\include\datosusuario.h
 	<iostream>
 
-1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\departamento.cpp
+1652835695 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
 	"DatosDepartamento.h"
 	<iostream>
@@ -1145,7 +1145,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652833306 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\nomina.cpp
+1652835695 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\nomina.cpp
 	"Nomina.h"
 	"DatosEmpleado.h"
 	"datosPuestos.h"
@@ -1157,7 +1157,7 @@
 	<iomanip>
 	<cstdlib>
 
-1652832343 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\puestos.cpp
+1652836059 source:c:\users\halld\onedrive\escritorio\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
