@@ -24,7 +24,7 @@ class DatosDepartamento
     private:
         int codigo;
         char apellido[ 15 ];
-        char nombre[ 10 ];
+        char nombre[ 20 ];
 
 };
 

@@ -112,9 +112,9 @@ cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
 cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
 cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
-    cout<<"\n\t\t\t---------------------------------"<<endl;
+    cout<<"\n\t\t\t----------------------------------"<<endl;
     cout<<"\t\t\t\t-------------------"<<endl;
-	cout<<"\t\t\t\t|  DEPARTAMENTOS  |"<<endl;
+	cout<<"\t\t\t\t | DEPARTAMENTOS |"<<endl;
 	cout<<"\t\t\t\t-------------------"<<endl;
 
 
@@ -124,7 +124,7 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
         << "\t\t\t 4. Eliminar Departamento" << endl
         << "\t\t\t 5. Mostrar Lista Departamento" << endl
         << "\t\t\t 6. Regresar al Menu Principal" << endl
-        << "\n\t\t\t---------------------------------"<<endl
+        << "\n\t\t\t----------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
 
     int opciionMenu;
@@ -189,9 +189,9 @@ void nuevoRegistroDepa( fstream &insertarEnArchivo )
         char apellido[ 15 ];
         char nombre[ 20 ];
 
-        cout<<"Escriba el Nombre del departamento: ";
+        cout<<"Escriba el Nombre del Departamento: ";
         cin>> setw( 15 ) >> apellido;
-        cout<<"Escriba el Nombre el area: ";
+        cout<<"Escriba el Nombre el Area: ";
         cin>> setw( 20 ) >> nombre;
 
         departamentos.establecerApellido( apellido );
@@ -300,7 +300,7 @@ void eliminarRegistroDepa( fstream &eliminarDeArchivo )
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroDepa( fstream &leerDeArchivo )
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << "Nombre Depa" << right << setw( 10 ) << " Area" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 12 ) << "Nombre Depa" << right << setw( 8 ) << " Area" << endl;
     leerDeArchivo.seekg( 0 );
     DatosDepartamento departamentos;
     leerDeArchivo.read( reinterpret_cast< char * >( &departamentos ), sizeof( DatosDepartamento ) );
@@ -315,9 +315,9 @@ void consultarRegistroDepa( fstream &leerDeArchivo )
 } //FIN CONSULTAR REGISTRO
 void mostrarLineaPantallaDepa( const DatosDepartamento &registro )
 {
-   cout << left <<" "<< setw( 10 ) << registro.obtenerCodigo()
+   cout << left <<" "<< setw( 9 ) << registro.obtenerCodigo()
           << setw( 16 ) << registro.obtenerApellido().data()
-          << setw( 14 ) << registro.obtenerNombre().data()<< endl;
+          << setw( 20 ) << registro.obtenerNombre().data()<< endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 Departamento::~Departamento()

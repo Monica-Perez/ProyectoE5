@@ -69,10 +69,10 @@ cout<< "\n";
 cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
 cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
 cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
-    cout<<"\n\t\t\t---------------------------------"<<endl;
+
     cout<<"\n\t\t\t\t---------------"<<endl;
 	cout<<"\t\t\t\t |   NOMINA  |"<<endl;
-	cout<<"\t\t\t\t---------------"<<endl;
+	cout<<"\t\t\t\t---------------"<<endl<<endl;
 
     fstream creditoEntradaSalida( "emp.dat", ios::in | ios::out | ios::binary);
     fstream creditoEntradaSalida2( "puest.dat", ios::in | ios::out | ios::binary);
@@ -87,7 +87,7 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
 void consultarRegistroPla( fstream &leerDeArchivo, fstream &leer2 , fstream &leer3)
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 15 ) << " Nombre"  << setw( 14 ) << "Departamento" << setw( 12 ) << "Puesto" <<  setw( 10 ) << " Sueldo" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 14 ) << " Apellido" << setw( 15 ) << " Nombre"  << setw( 17 ) << "Departamento" << setw( 14 ) << "Puesto" <<  setw( 10 ) << " Sueldo" << endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     datosPuestos puestos;
@@ -102,18 +102,18 @@ void consultarRegistroPla( fstream &leerDeArchivo, fstream &leer2 , fstream &lee
             leer2.read( reinterpret_cast< char * >( &puestos ), sizeof( datosPuestos ) );
             leer3.read (reinterpret_cast< char * >( &Departamentos ), sizeof( DatosDepartamento ) );
    } //FIN WHILE
-   cout<<endl;
+   cout<<endl<<endl;
    system("pause");
 } //FIN CONSULTAR REGISTRO
 
 void mostrarLineaPantallaPla( const DatosEmpleado &registro, const datosPuestos &regpu , const DatosDepartamento &regdep)
 {
    cout << left <<" "<< setw( 10 ) << registro.obtenerCodigo()
-          << setw( 16 ) << registro.obtenerApellido().data()
+          << setw( 14 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
-           << setw( 14 ) << regdep.obtenerApellido().data()
-          << setw( 12 ) << regpu.obtenerNombre().data()
-          << setw( 10 ) << setprecision( 3 ) << right << fixed
+          << setw( 17 ) << regdep.obtenerApellido().data() //DEPARTAMENTO
+          << setw( 11 ) << regpu.obtenerNombre().data()
+          << setw( 12 ) << setprecision( 3 ) << right << fixed
           << showpoint << registro.obtenerSueldo() << endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-

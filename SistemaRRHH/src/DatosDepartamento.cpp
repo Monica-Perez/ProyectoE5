@@ -42,7 +42,7 @@ void DatosDepartamento::establecerNombre ( string primerNombre)
 {
     const char *valorNombre = primerNombre.data();
     int longitud = strlen( valorNombre );
-    longitud = ( longitud < 10 ? longitud : 9 );
+    longitud = ( longitud < 20 ? longitud : 19 );
     strncpy( nombre, valorNombre, longitud );
 
 }
