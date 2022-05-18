@@ -113,9 +113,9 @@ cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
 cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
     cout<<"\n\t\t\t----------------------------------"<<endl;
-    cout<<"\t\t\t\t-------------------"<<endl;
+    cout<<"\t\t\t\t------------------"<<endl;
 	cout<<"\t\t\t\t | DEPARTAMENTOS |"<<endl;
-	cout<<"\t\t\t\t-------------------"<<endl;
+	cout<<"\t\t\t\t------------------"<<endl;
 
 
     cout<< "\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
