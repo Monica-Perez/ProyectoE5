@@ -71,8 +71,8 @@ void DatosEmpleado::establecerCorreo( string correostring )
     strncpy( correo, valorCorreo, longitud );
 
     correostring[ longitud ] = '\0';
-
 }
+
 DatosEmpleado::~DatosEmpleado()
 {
     //dtor

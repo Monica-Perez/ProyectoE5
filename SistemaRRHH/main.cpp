@@ -7,14 +7,14 @@
 #include "Nomina.h"
 #include "Usuarios.h"
 #include "Nomina.h"
+#include "Conceptos.h"
 #include <ctime>
 #include <vector>
-
 
 using namespace std;
 
 int escribirOpcion();
-enum Opciones { empleados = 1, puestos, departamentos, impuestos, empresas, nomina, FIN };
+enum Opciones { empleados = 1, puestos, departamentos, impuestos, empresas, conceptos, nomina, FIN };
 
 int main()
 {
@@ -46,6 +46,11 @@ int main()
             case empresas:
                 {
                     Empresas claseempresa;
+                }
+            break;
+            case conceptos:
+                {
+                    Conceptos claseconceptos;
                 }
             break;
             case nomina:
@@ -104,8 +109,9 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
         << "\t\t\t  3. Departamentos" << endl
         << "\t\t\t  4. Impuestos" << endl
         << "\t\t\t  5. Empresas" << endl
-        << "\t\t\t  6. Generacion de Nomina" << endl
-        << "\t\t\t  7. Finalizar el Programa" << endl
+        << "\t\t\t  6. Conceptos" << endl
+        << "\t\t\t  7. Generacion de Nomina" << endl
+        << "\t\t\t  8. Finalizar el Programa" << endl
         <<"\n\t\t\t---------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
    int opcionMenu;

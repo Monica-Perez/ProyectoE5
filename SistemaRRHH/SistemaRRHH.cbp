@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Conceptos.h" />
+		<Unit filename="include/DatosConceptos.h" />
 		<Unit filename="include/DatosDepartamento.h" />
 		<Unit filename="include/DatosEmpleado.h" />
 		<Unit filename="include/DatosEmpresas.h" />
@@ -48,6 +50,8 @@
 		<Unit filename="include/Usuarios.h" />
 		<Unit filename="include/datosimpuestos.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Conceptos.cpp" />
+		<Unit filename="src/DatosConceptos.cpp" />
 		<Unit filename="src/DatosDepartamento.cpp" />
 		<Unit filename="src/DatosEmpleado.cpp" />
 		<Unit filename="src/DatosEmpresas.cpp" />

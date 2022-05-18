@@ -8,7 +8,6 @@ class DatosEmpleado
 {
     public:
         virtual ~DatosEmpleado();
-
         DatosEmpleado( int = 0, string = "", string = "", string = "", double = 0.0 );
 
         void establecerCodigo( int );

@@ -1,0 +1,2 @@
+Codigo    Nombre              Efecto          Estado               Valor
+1            Bonificacion      Positivo      Activo               250.00
