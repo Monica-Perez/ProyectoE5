@@ -79,7 +79,7 @@ Impuestos::Impuestos()
    } //FIN WHILE
 }
 int opcionImp(){
-    //system("cls");
+    system("cls");
 
     time_t now = time(0);
         tm * time = localtime(&now);
@@ -156,7 +156,8 @@ void imprimirRegistroImp( fstream &leerDeArchivo )
         mostrarLineaImp( archivoImprimirSalida, impuestos );
         leerDeArchivo.read( reinterpret_cast< char * >( &impuestos ), sizeof( datosimpuestos ) );
     } //FIN DE WHILE
-
+cout<<"\n";
+ system("pause");
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
 void mostrarLineaImp( ostream &salida, const datosimpuestos &registro )
 {
@@ -176,6 +177,8 @@ void crearArchivoCreditoImp()
     datosimpuestos impuestoEnBlanco;
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &impuestoEnBlanco ), sizeof( datosimpuestos ) );
+cout<<"\n";
+ system("pause");
 }
 void nuevoRegistroImp( fstream &insertarEnArchivo )
 {
@@ -204,7 +207,8 @@ void nuevoRegistroImp( fstream &insertarEnArchivo )
     } //FIN IF
     else
         cerr << "El impuesto con codigo #" << codigo << " ya contiene informacion.\n" << endl;
-
+cout<<"\n";
+ system("pause");
 } //FIN REGISTRO
 int obtenernCodigoImp( const char * const indicador )
 {
@@ -269,7 +273,8 @@ void modificarRegistroImp( fstream &actualizarArchivo )
             actualizarArchivo.write(reinterpret_cast< const char * >( &impuestos ), sizeof( datosimpuestos ) );
         }
     }
-
+cout<<"\n";
+ system("pause");
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroImp( fstream &eliminarDeArchivo )
 {
@@ -290,7 +295,8 @@ void eliminarRegistroImp( fstream &eliminarDeArchivo )
    //ERROR SI NO EXISTE
    else
       cerr << "La cuenta #" << codigo << " esta vacia.\n";
-
+cout<<"\n";
+ system("pause");
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroImp( fstream &leerDeArchivo )
 {
@@ -304,7 +310,8 @@ void consultarRegistroImp( fstream &leerDeArchivo )
             leerDeArchivo.read( reinterpret_cast< char * >( &impuestos ), sizeof( datosimpuestos ) );
 
    } //FIN WHILE
-
+cout<<"\n";
+ system("pause");
 } //FIN CONSULTAR REGISTRO
 void mostrarLineaPantallaImp( const datosimpuestos &registro)
 {
