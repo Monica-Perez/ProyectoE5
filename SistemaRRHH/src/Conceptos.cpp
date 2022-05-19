@@ -30,8 +30,8 @@ void crearArchivoCreditoCon();
 void mostrarLineaCon( ostream&, const DatosConceptos & );
 void nuevoRegistroCon( fstream& );
 int obtenernCodigoCon( const char * const );
-/*void modificarRegistroEmp( fstream& );
-void eliminarRegistroEmp( fstream& );
+void modificarRegistroCon( fstream& );
+/*void eliminarRegistroEmp( fstream& );
 void consultarRegistroEmp( fstream& );
 void mostrarLineaPantallaEmp( const DatosEmpleado &);*/
 
@@ -56,10 +56,10 @@ Conceptos::Conceptos()
             case nuevo:
                 nuevoRegistroCon( creditoEntradaSalida );
             break;
-            /*case modificar:
-                modificarRegistroEmpre( creditoEntradaSalida );
+            case modificar:
+                modificarRegistroCon( creditoEntradaSalida );
             break;
-            case eliminar:
+            /*case eliminar:
                 eliminarRegistroEmpre( creditoEntradaSalida );
             break;
             case mostrar:
@@ -226,7 +226,105 @@ int obtenernCodigoCon( const char * const indicador )
    return codigo;
 
 } //FIN -OBTENERCODIGO-
+void modificarRegistroCon( fstream &actualizarArchivo )
+{
+    int opcionAc=0;
+    cout<<"\nEscoja opcion a Actualizar: \n 1. Nombre\n 2. Efecto\n 3. Estado \n 4. Valor\n  R - ";
+    cin>>opcionAc;
 
+    if (opcionAc == 1){
+        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
+
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos ));
+
+        DatosConceptos conceptos ;
+        actualizarArchivo.read( reinterpret_cast< char * >( &conceptos ), sizeof( DatosConceptos ) );
+
+        if (conceptos.obtenerCodigo() != 0 ) {
+            mostrarLineaCon( cout, conceptos  );
+            cout << "\nEscriba el nuevo Nombre: ";
+            string nombre;
+            cin >> nombre;
+            string nombreAnterior = conceptos.obtenerNombre();
+            conceptos.establecerNombre( nombre );
+            mostrarLineaCon( cout, conceptos  );
+
+
+            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+
+            actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
+        }
+
+    }else if (opcionAc== 2){
+        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modifcar" );
+
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos ));
+
+        DatosConceptos conceptos ;
+        actualizarArchivo.read( reinterpret_cast< char * >( &conceptos  ), sizeof( DatosConceptos ) );
+
+        //ACTUALIZAR EL REGISTRO
+        if (conceptos.obtenerCodigo() != 0 ) {
+            mostrarLineaCon( cout, conceptos  );
+            cout << "\nEscriba el nuevo Efecto: ";
+            string efecto;
+            cin >> efecto;
+
+            string efectoAnterior = conceptos.obtenerEfecto();
+            conceptos.establecerEfecto( efecto );
+            mostrarLineaCon( cout, conceptos  );
+
+            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+            actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
+        }
+    }else if(opcionAc == 3){
+        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modifcar" );
+
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos));
+
+        DatosConceptos conceptos ;
+        actualizarArchivo.read( reinterpret_cast< char * >( &conceptos  ), sizeof( DatosConceptos ) );
+
+        if (conceptos.obtenerCodigo() != 0 ) {
+                mostrarLineaCon( cout, conceptos  );
+                cout << "\nEscriba el nuevo Estado: ";
+                string estado;
+                cin >> estado;
+
+                string estadoAnterior = conceptos.obtenerEstado();
+                conceptos.establecerEstado( estado );
+                mostrarLineaCon( cout, conceptos  );
+
+                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+
+                actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
+        }
+    }else if(opcionAc == 4){
+        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modifcar" );
+
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos ));
+
+        DatosConceptos conceptos ;
+        actualizarArchivo.read( reinterpret_cast< char * >( &conceptos  ), sizeof( DatosConceptos ) );
+
+        if (conceptos.obtenerCodigo() != 0 ) {
+                mostrarLineaCon( cout, conceptos  );
+                cout << "\nEscriba el nuevo Valor: ";
+                double valor;
+                cin >> valor;
+
+                double valorAnterior = conceptos.obtenerValor();
+                conceptos.establecerValor( valor );
+                mostrarLineaCon( cout, conceptos  );
+
+                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+
+                actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
+        }
+    }
+cout<<"\n";
+ system("pause");
+} //FIN DE -ACTUALIZAR REGISTRO-
 Conceptos::~Conceptos()
 {
     //dtor

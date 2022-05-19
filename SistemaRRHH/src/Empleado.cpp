@@ -371,7 +371,6 @@ void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
           << showpoint << registro.obtenerSueldo() << endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-
-
 Empleado::~Empleado()
 {
     //dtor
