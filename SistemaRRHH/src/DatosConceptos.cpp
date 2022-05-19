@@ -7,7 +7,7 @@ using std::string;
 
 /*REALIZADO POR MONICA PEREZ, 9959-21-1840*/
 
-DatosConceptos::DatosConceptos(int valorCodigo, string valorNombre, string valorEfecto, string valorEstado, double valorV )
+DatosConceptos::DatosConceptos(int valorCodigo, string valorNombre, string valorEfecto, string valorEstado, float valorV )
 {
     establecerCodigo( valorCodigo );
     establecerNombre( valorNombre );
@@ -68,11 +68,11 @@ void DatosConceptos::establecerEstado( string estadoString )
     estadoString[ longitud ] = '\0';
 }
 /*VALOR*/
-double DatosConceptos::obtenerValor() const
+float DatosConceptos::obtenerValor() const
 {
    return valor;
 }
-void DatosConceptos::establecerValor( double valorV )
+void DatosConceptos::establecerValor( float valorV )
 {
    valor = valorV;
 }
