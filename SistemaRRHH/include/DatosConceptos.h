@@ -8,7 +8,7 @@ class DatosConceptos
 {
     public:
         virtual ~DatosConceptos();
-        DatosConceptos( int = 0, string = "", string = "", string = "", double = 0.0 );
+        DatosConceptos( int = 0, string = "", string = "", string = "", float = 0.0000 );
 
         void establecerCodigo( int );
         int obtenerCodigo() const;
@@ -22,8 +22,8 @@ class DatosConceptos
         void establecerEstado( string );
         string obtenerEstado() const;
 
-        void establecerValor( double );
-        double obtenerValor() const;
+        void establecerValor( float );
+        float obtenerValor() const;
 
     protected:
 
@@ -32,7 +32,7 @@ class DatosConceptos
         char nombre[ 20 ];
         char efecto[ 15 ];
         char estado[ 15 ];
-        double valor;
+        float valor;
 };
 
 #endif // DATOSCONCEPTOS_H
