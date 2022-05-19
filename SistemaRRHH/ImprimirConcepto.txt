@@ -1,2 +1,2 @@
 Codigo    Nombre              Efecto          Estado               Valor
-1            Bonificacion      Positivo      Activo               250.00
+1            Bonificacion      Positivo      desactivado¥ÿ      250.00
