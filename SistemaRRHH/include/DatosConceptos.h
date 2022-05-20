@@ -28,7 +28,7 @@ class DatosConceptos
     protected:
 
     private:
-        int codigo;
+        int codigoConceptos;
         char nombre[ 20 ];
         char efecto[ 15 ];
         char estado[ 15 ];

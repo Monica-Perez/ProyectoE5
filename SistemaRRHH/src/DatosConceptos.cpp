@@ -18,11 +18,11 @@ DatosConceptos::DatosConceptos(int valorCodigo, string valorNombre, string valor
 /*CODIGO*/
 int DatosConceptos::obtenerCodigo() const
 {
-   return codigo;
+   return codigoConceptos;
 }
 void DatosConceptos::establecerCodigo( int valorCodigo )
 {
-   codigo = valorCodigo;
+   codigoConceptos = valorCodigo;
 }
 
 /*NOMBRE*/

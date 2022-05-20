@@ -180,8 +180,8 @@ void crearArchivoCreditoCon()
 }
 void nuevoRegistroCon( fstream &insertarEnArchivo )
 {
-    int codigo = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
-    insertarEnArchivo.seekg( ( codigo - 1 ) * sizeof( DatosConceptos ) );
+    int codigoConceptos = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
+    insertarEnArchivo.seekg( ( codigoConceptos - 1 ) * sizeof( DatosConceptos ) );
     DatosConceptos conceptos;
     insertarEnArchivo.read( reinterpret_cast< char * >( &conceptos ), sizeof( DatosConceptos ) );
 
@@ -202,28 +202,28 @@ void nuevoRegistroCon( fstream &insertarEnArchivo )
         conceptos.establecerEfecto( efecto );
         conceptos.establecerEstado( estado );
         conceptos.establecerValor( valor );
-        conceptos.establecerCodigo( codigo );
+        conceptos.establecerCodigo( codigoConceptos );
 
-        insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosConceptos ) );
+        insertarEnArchivo.seekp( ( codigoConceptos - 1 ) * sizeof( DatosConceptos ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ) );
         cout<<"\n Concepto agregado Exitosamente..."<<endl;
 
     } //FIN IF
     else
-        cerr << "El Concepto con codigo #" << codigo << " ya contiene informacion.\n" << endl;
+        cerr << "El Concepto con codigo #" << codigoConceptos << " ya contiene informacion.\n" << endl;
     cout<<"\n";
     system("pause");
 } //FIN REGISTRO
 int obtenernCodigoCon( const char * const indicador )
 {
-   int codigo;
+   int codigoConceptos;
     do {
       cout << indicador << "(1 - 100): ";
-      cin >> codigo;
+      cin >> codigoConceptos;
 
-    } while ( codigo < 1 || codigo > 100 );
+    } while ( codigoConceptos < 1 || codigoConceptos > 100 );
 
-   return codigo;
+   return codigoConceptos;
 
 } //FIN -OBTENERCODIGO-
 void modificarRegistroCon( fstream &actualizarArchivo )
@@ -233,9 +233,9 @@ void modificarRegistroCon( fstream &actualizarArchivo )
     cin>>opcionAc;
 
     if (opcionAc == 1){
-        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos ));
+        actualizarArchivo.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
         DatosConceptos conceptos ;
         actualizarArchivo.read( reinterpret_cast< char * >( &conceptos ), sizeof( DatosConceptos ) );
@@ -250,15 +250,15 @@ void modificarRegistroCon( fstream &actualizarArchivo )
             mostrarLineaCon( cout, conceptos  );
 
 
-            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+            actualizarArchivo.seekp(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
             actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
         }
 
     }else if (opcionAc== 2){
-        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos ));
+        actualizarArchivo.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
         DatosConceptos conceptos ;
         actualizarArchivo.read( reinterpret_cast< char * >( &conceptos  ), sizeof( DatosConceptos ) );
@@ -274,13 +274,13 @@ void modificarRegistroCon( fstream &actualizarArchivo )
             conceptos.establecerEfecto( efecto );
             mostrarLineaCon( cout, conceptos  );
 
-            actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+            actualizarArchivo.seekp(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
             actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
         }
     }else if(opcionAc == 3){
-        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos));
+        actualizarArchivo.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos));
 
         DatosConceptos conceptos ;
         actualizarArchivo.read( reinterpret_cast< char * >( &conceptos  ), sizeof( DatosConceptos ) );
@@ -295,14 +295,14 @@ void modificarRegistroCon( fstream &actualizarArchivo )
                 conceptos.establecerEstado( estado );
                 mostrarLineaCon( cout, conceptos  );
 
-                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+                actualizarArchivo.seekp(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
                 actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
         }
     }else if(opcionAc == 4){
-        int codigo = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
 
-        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosConceptos ));
+        actualizarArchivo.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
         DatosConceptos conceptos ;
         actualizarArchivo.read( reinterpret_cast< char * >( &conceptos  ), sizeof( DatosConceptos ) );
@@ -317,7 +317,7 @@ void modificarRegistroCon( fstream &actualizarArchivo )
                 conceptos.establecerValor( valor );
                 mostrarLineaCon( cout, conceptos  );
 
-                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosConceptos ));
+                actualizarArchivo.seekp(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
                 actualizarArchivo.write(reinterpret_cast< const char * >( &conceptos  ), sizeof( DatosConceptos ) );
         }
@@ -327,23 +327,23 @@ cout<<"\n";
 } //FIN DE -ACTUALIZAR REGISTRO-
 void eliminarRegistroCon( fstream &eliminarDeArchivo )
 {
-    int codigo = obtenernCodigoCon( "\nEscriba el codigo del concepto a Eliminar" );
-    eliminarDeArchivo.seekg( ( codigo - 1 ) * sizeof( DatosConceptos ) );
+    int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del concepto a Eliminar" );
+    eliminarDeArchivo.seekg( ( codigoConceptos - 1 ) * sizeof( DatosConceptos ) );
     DatosConceptos conceptos;
     eliminarDeArchivo.read( reinterpret_cast< char * >( &conceptos ), sizeof( DatosConceptos ) );
 
     if ( conceptos.obtenerCodigo() != 0 ) {
         DatosConceptos clienteEnBlanco;
-        eliminarDeArchivo.seekp( ( codigo - 1 ) * sizeof( DatosConceptos ) );
+        eliminarDeArchivo.seekp( ( codigoConceptos - 1 ) * sizeof( DatosConceptos ) );
         eliminarDeArchivo.write( reinterpret_cast< const char * >( &clienteEnBlanco ), sizeof( DatosConceptos ) );
 
-      cout << " Concepto #" << codigo << " eliminado Exitosamente.\n";
+      cout << " Concepto #" << codigoConceptos << " eliminado Exitosamente.\n";
 
    } //FIN IF
 
    //ERROR SI NO EXISTE
    else
-      cerr << "El Concepto #" << codigo << " esta vacia.\n";
+      cerr << "El Concepto #" << codigoConceptos << " esta vacia.\n";
 cout<<"\n";
  system("pause");
 } //FIN -ELIMINARREGISTRO-

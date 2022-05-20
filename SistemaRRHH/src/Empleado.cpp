@@ -1,5 +1,6 @@
 #include "Empleado.h"
 #include "DatosEmpleado.h"
+#include "DatosConceptos.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -28,12 +29,13 @@ int opcionEmp();
 void imprimirRegistroEmp( fstream& );
 void crearArchivoCreditoEmp();
 void mostrarLineaEmp( ostream&, const DatosEmpleado & );
-void nuevoRegistroEmp( fstream& );
+void nuevoRegistroEmp( fstream& , fstream&);
 int obtenernCodigoEmp( const char * const );
 void modificarRegistroEmp( fstream& );
 void eliminarRegistroEmp( fstream& );
 void consultarRegistroEmp( fstream& );
 void mostrarLineaPantallaEmp( const DatosEmpleado &);
+int obtenernCodigoCon( const char * const );
 
 using namespace std;
 
@@ -46,6 +48,7 @@ Empleado::Empleado()
         cout <<  "Archivo creado satisfactoriamente, pruebe de nuevo\n";
         exit ( 1 );
     }
+    fstream creditoEntradaSalida22( "Conceptos.dat", ios::in | ios::out | ios::binary);
     enum Opciones { agregar = 1, nuevo, modificar, eliminar, mostrar, FIN };
     int opcion;
     while ( ( opcion = opcionEmp() ) != FIN ) {
@@ -54,7 +57,7 @@ Empleado::Empleado()
                 imprimirRegistroEmp( creditoEntradaSalida );
             break;
             case nuevo:
-                nuevoRegistroEmp( creditoEntradaSalida );
+                nuevoRegistroEmp( creditoEntradaSalida, creditoEntradaSalida22 );
             break;
             case modificar:
                 modificarRegistroEmp( creditoEntradaSalida );
@@ -141,8 +144,8 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
 
     } //FIN DE INSTRUCCION if
 
-    archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 16 ) << "Correo"<< right
-       << setw( 10 ) << "Sueldo" << endl;
+    archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 16 ) << "Correo"
+       << setw( 10 ) << "Sueldo" << right << setw( 10 ) << "IGSS"<< endl;
     leerDeArchivo.seekg( 0 );
 
     DatosEmpleado empleados;
@@ -162,7 +165,8 @@ void mostrarLineaEmp( ostream &salida, const DatosEmpleado &registro )
           << setw( 16 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
-          << setw( 10 ) << setprecision( 2 ) << right << fixed<< showpoint << registro.obtenerSueldo() << endl;
+          << setw( 10 ) << setprecision( 2 ) << fixed<< showpoint << registro.obtenerSueldo()
+          << setw( 10 ) << setprecision( 2 ) << right << fixed << showpoint << registro.obtenerIGSS()<< endl;
 
 }//FIN -MOSTRARLINEA-
 void crearArchivoCreditoEmp()
@@ -178,18 +182,23 @@ void crearArchivoCreditoEmp()
 cout<<"\n";
  system("pause");
 }
-void nuevoRegistroEmp( fstream &insertarEnArchivo )
+void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC )
 {
     int codigo = obtenernCodigoEmp( "\nEscriba el Codigo del Empleado " );
     insertarEnArchivo.seekg( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
+    DatosConceptos conceptos;
     DatosEmpleado empleados;
     insertarEnArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
+    leerDeArchivoC.read( reinterpret_cast< char * >( &conceptos ), sizeof( DatosConceptos ) );
+
 
     if ( empleados.obtenerCodigo() == 0 ) {
         char apellido[ 15 ];
         char nombre[ 10 ];
         char correo[ 15 ];
         double sueldo;
+        double impIGSS;
+        double impIGSS2;
         cout<<"Escriba el Apellido del Empleado: ";
         cin>> setw( 15 ) >> apellido;
         cout<<"Escriba el Nombre del Empleado: ";
@@ -198,6 +207,14 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo )
         cin>> setw( 15 ) >> correo;
         cout<<"Escriba el Sueldo del Empleado: ";
         cin>> sueldo;
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
+        codigoConceptos=1;
+        leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
+
+        impIGSS2 = conceptos.obtenerValor();
+        empleados.establecerIGSS((impIGSS2/100)*sueldo);
+        leerDeArchivoC.write(reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ) );
+
         empleados.establecerApellido( apellido );
         empleados.establecerNombre( nombre );
         empleados.establecerCorreo( correo );
@@ -348,7 +365,7 @@ cout<<"\n";
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroEmp( fstream &leerDeArchivo )
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << right << setw( 10 ) << " Sueldo" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 10 ) << " Sueldo" << right << setw( 10 ) << " IGSS"<< endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -368,7 +385,9 @@ void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
           << setw( 10 ) << setprecision( 2 ) << right << fixed
-          << showpoint << registro.obtenerSueldo() << endl;
+          << showpoint << registro.obtenerSueldo()
+          << setw( 10 ) << setprecision( 2 ) << right << fixed
+          << showpoint << registro.obtenerIGSS()<< endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 Empleado::~Empleado()
