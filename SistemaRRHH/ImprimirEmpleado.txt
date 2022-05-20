@@ -1,3 +1,4 @@
-Codigo    Apellido        Nombre        Correo              Sueldo
-1         Lopez           Roberto       gmail              5300.00
-2         Perez           Juan          jgmail.com         2100.00
+Codigo    Apellido        Nombre        Correo          Sueldo          IGSS
+1         R               RR            RER@            4500.00       217.35
+2         YY              YTE           ER@G            4500.00       217.35
+3         kj              jskjs        kj@gkj          4800.00       231.84

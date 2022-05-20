@@ -5,13 +5,14 @@
 
 using std::string;
 
-DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, double valorSueldo )
+DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, double valorSueldo, double valorIGSS )
 {
     establecerCodigo( valorCodigo );
     establecerApellido( valorApellido );
     establecerNombre( valorNombre );
     establecerCorreo( valorCorreo );
     establecerSueldo( valorSueldo );
+    establecerIGSS (valorIGSS);
 
 }
 int DatosEmpleado::obtenerCodigo() const
@@ -71,6 +72,16 @@ void DatosEmpleado::establecerCorreo( string correostring )
     strncpy( correo, valorCorreo, longitud );
 
     correostring[ longitud ] = '\0';
+}
+
+double DatosEmpleado::obtenerIGSS() const
+{
+   return impIGSS;
+}
+
+void DatosEmpleado::establecerIGSS( double valorIGSS )
+{
+   impIGSS = valorIGSS;
 }
 
 DatosEmpleado::~DatosEmpleado()
