@@ -79,41 +79,41 @@ Empleado::Empleado()
    } //FIN WHILE
 }
 int opcionEmp(){
-system("cls");
+    system("cls");
 
-     time_t now = time(0);
-        tm * time = localtime(&now);
+    time_t now = time(0);
+    tm * time = localtime(&now);
 
-vector<string> dia_semana;
-dia_semana.push_back("Domingo");
-dia_semana.push_back("Lunes");
-dia_semana.push_back("Martes");
-dia_semana.push_back("Miercoles");
-dia_semana.push_back("Jueves");
-dia_semana.push_back("Viernes");
-dia_semana.push_back("Sabado");
+    vector<string> dia_semana;
+    dia_semana.push_back("Domingo");
+    dia_semana.push_back("Lunes");
+    dia_semana.push_back("Martes");
+    dia_semana.push_back("Miercoles");
+    dia_semana.push_back("Jueves");
+    dia_semana.push_back("Viernes");
+    dia_semana.push_back("Sabado");
 
-vector<string> mes;
-mes.push_back("Enero");
-mes.push_back("Febrero");
-mes.push_back("Marzo");
-mes.push_back("Abril");
-mes.push_back("Mayo");
-mes.push_back("Junio");
-mes.push_back("Julio");
-mes.push_back("Agosto");
-mes.push_back("Septiembre");
-mes.push_back("Octubre");
-mes.push_back("Noviembre");
-mes.push_back("Diciembre");
+    vector<string> mes;
+    mes.push_back("Enero");
+    mes.push_back("Febrero");
+    mes.push_back("Marzo");
+    mes.push_back("Abril");
+    mes.push_back("Mayo");
+    mes.push_back("Junio");
+    mes.push_back("Julio");
+    mes.push_back("Agosto");
+    mes.push_back("Septiembre");
+    mes.push_back("Octubre");
+    mes.push_back("Noviembre");
+    mes.push_back("Diciembre");
 
-int year = 1900 + time->tm_year;
+    int year = 1900 + time->tm_year;
 
-//Formato=hoy miercoles, 27 de mayo del 2015
-cout<< "\n";
-cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
-cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
-cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
+    //Formato=hoy miercoles, 27 de mayo del 2015
+    cout<< "\n";
+    cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
+    cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
+    cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
 
     cout<<"\n\t\t\t---------------------------------"<<endl;
@@ -145,7 +145,7 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
     } //FIN DE INSTRUCCION if
 
     archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 16 ) << "Correo"
-       << setw( 10 ) << "Sueldo" << right << setw( 10 ) << "IGSS"<< endl;
+       << setw( 10 ) << "Sueldo" << setw( 10 ) << "IGSS" << right << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << setw( 10 ) << "valorHE" << endl;
     leerDeArchivo.seekg( 0 );
 
     DatosEmpleado empleados;
@@ -156,8 +156,8 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
         mostrarLineaEmp( archivoImprimirSalida, empleados );
         leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
     } //FIN DE WHILE
-cout<<"\n";
- system("pause");
+    cout<<"\n";
+    system("pause");
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
 void mostrarLineaEmp( ostream &salida, const DatosEmpleado &registro )
 {
@@ -165,8 +165,11 @@ void mostrarLineaEmp( ostream &salida, const DatosEmpleado &registro )
           << setw( 16 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
-          << setw( 10 ) << setprecision( 2 ) << fixed<< showpoint << registro.obtenerSueldo()
-          << setw( 10 ) << setprecision( 2 ) << right << fixed << showpoint << registro.obtenerIGSS()<< endl;
+          << setw( 10 ) << registro.obtenerSueldo()
+          << setw( 10 ) << registro.obtenerIGSS()
+          << setw( 10 ) << registro.obtenerISR()
+          << setw( 10 ) << registro.obtenerHoras()
+          << setw( 10 ) << setprecision( 2 ) << right << fixed << showpoint << registro.obtenerHE()<< endl;
 
 }//FIN -MOSTRARLINEA-
 void crearArchivoCreditoEmp()
@@ -193,12 +196,16 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC )
 
 
     if ( empleados.obtenerCodigo() == 0 ) {
+        int codigoConceptos=1;
+        int contadorr=0;
         char apellido[ 15 ];
         char nombre[ 10 ];
         char correo[ 15 ];
         double sueldo;
-        double impIGSS;
         double impIGSS2;
+        double impISR;
+        double valorHE;
+        int horas;
         cout<<"Escriba el Apellido del Empleado: ";
         cin>> setw( 15 ) >> apellido;
         cout<<"Escriba el Nombre del Empleado: ";
@@ -207,19 +214,72 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC )
         cin>> setw( 15 ) >> correo;
         cout<<"Escriba el Sueldo del Empleado: ";
         cin>> sueldo;
+        cout<<"Escriba las Horas Extras del Empleado: ";
+        cin>> horas;
+
+        string res;
+
+        do{
+            cout << "\nDesea agregar otro Concepto? ";
+            cin>>res;
+
+            if (contadorr==1)
+            {
+                codigoConceptos=1;
+                leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
+                impIGSS2 = conceptos.obtenerValor();
+                empleados.establecerIGSS((impIGSS2/100)*sueldo);
+            }
+            if (contadorr==2)
+            {
+                codigoConceptos=2;
+                leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
+                impISR = conceptos.obtenerValor();
+                empleados.establecerISR((impISR/100)*sueldo);
+            }
+            contadorr ++;
+
+            /*impIGSS2 = conceptos.obtenerValor();
+            empleados.establecerIGSS((impIGSS2/100)*sueldo);
+            leerDeArchivoC.write(reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ));
+
+            impISR = conceptos.obtenerValor();
+            empleados.establecerISR((impISR/100)*sueldo);
+            leerDeArchivoC.write(reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ) );*/
+            }
+        while(res == "si" || res == "SI");
+
+        /*while (contadorr<3)
+        {
+        if (contadorr==1)
+        {
         int codigoConceptos = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
         codigoConceptos=1;
         leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
 
         impIGSS2 = conceptos.obtenerValor();
         empleados.establecerIGSS((impIGSS2/100)*sueldo);
-        leerDeArchivoC.write(reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ) );
+        contadorr ++;
+        }
+        if (contadorr==2)
+        {
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
+        codigoConceptos=2;
+        leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
+
+        impISR = conceptos.obtenerValor();
+        empleados.establecerISR((impISR/100)*sueldo);
+        contadorr ++;
+        }
+        }*/
 
         empleados.establecerApellido( apellido );
         empleados.establecerNombre( nombre );
         empleados.establecerCorreo( correo );
         empleados.establecerSueldo( sueldo );
+        empleados.establecerHoras( horas );
         empleados.establecerCodigo( codigo );
+        empleados.establecerHE((((sueldo/30)/8)*1.5)*horas);
 
         insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -365,7 +425,8 @@ cout<<"\n";
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroEmp( fstream &leerDeArchivo )
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 10 ) << " Sueldo" << right << setw( 10 ) << " IGSS"<< endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 10 )
+    << " Sueldo" << setw( 10 ) << " IGSS" << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << setw( 10 ) << "valorHE" << endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -384,10 +445,12 @@ void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
           << setw( 16 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
+          << setw( 10 ) << registro.obtenerSueldo()
+          << setw( 10 ) << registro.obtenerIGSS()
+          << setw( 10 ) << registro.obtenerISR()
+          << setw( 10 ) << registro.obtenerHoras()
           << setw( 10 ) << setprecision( 2 ) << right << fixed
-          << showpoint << registro.obtenerSueldo()
-          << setw( 10 ) << setprecision( 2 ) << right << fixed
-          << showpoint << registro.obtenerIGSS()<< endl;
+          << showpoint << registro.obtenerHE()<< endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 Empleado::~Empleado()

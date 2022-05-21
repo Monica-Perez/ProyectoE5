@@ -1,4 +1,2 @@
-Codigo    Apellido        Nombre        Correo          Sueldo          IGSS
-1         R               RR            RER@            4500.00       217.35
-2         YY              YTE           ER@G            4500.00       217.35
-3         kj              jskjs        kj@gkj          4800.00       231.84
+Codigo    Apellido        Nombre        Correo          Sueldo    IGSS             ISRHorasExtras
+1         oo              jj            gg              4500      0         0                  5

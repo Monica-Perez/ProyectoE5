@@ -1,2 +1,3 @@
 Codigo    Nombre              Efecto          Estado               Valor
-1            IGGS               -             Activo                 4.83
+1            IGSS               -             Activo                 4.83
+2            ISR                -             Activo                 5.00
