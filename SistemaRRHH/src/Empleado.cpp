@@ -306,7 +306,7 @@ int obtenernCodigoEmp( const char * const indicador )
 void modificarRegistroEmp( fstream &actualizarArchivo )
 {
     int opcionAc=0;
-    cout<<"\nEscoja opcion a Actualizar: \n 1. Sueldo\n 2. Nombre\n 3. Apellido \n 4. Correo\n  R - ";
+    cout<<"\nEscoja opcion a Actualizar: \n 1. Sueldo\n 2. Nombre\n 3. Apellido \n 4. Correo\n 5. Horas extra \n  R - ";
     cin>>opcionAc;
 
     if (opcionAc == 1){
@@ -391,6 +391,29 @@ void modificarRegistroEmp( fstream &actualizarArchivo )
 
                 string correoAnterior = empleados.obtenerCorreo();
                 empleados.establecerCorreo( correo );
+                mostrarLineaEmp( cout, empleados );
+
+                actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosEmpleado ));
+
+                actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
+        }
+    }
+    else if(opcionAc == 5){
+        int codigo = obtenernCodigoEmp( "\nEscriba el codigo del Empleado que desea Modifcar" );
+
+        actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosEmpleado ));
+
+        DatosEmpleado empleados;
+        actualizarArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
+
+        if (empleados.obtenerCodigo() != 0 ) {
+                mostrarLineaEmp( cout, empleados );
+                cout << "\nEscriba la nueva cantidad de horas extra: ";
+                double horas;
+                cin >> horas;
+
+                double horaAnterior = empleados.obtenerHoras();
+                empleados.establecerHoras( horas );
                 mostrarLineaEmp( cout, empleados );
 
                 actualizarArchivo.seekp(( codigo - 1 ) * sizeof( DatosEmpleado ));
