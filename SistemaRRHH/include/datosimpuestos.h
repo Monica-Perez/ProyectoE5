@@ -23,7 +23,7 @@ class datosimpuestos
     protected:
 
     private:
-        int codigo;
+        int codigoImpuestos;
         char nombre[ 15 ];
         double cantidad;
 

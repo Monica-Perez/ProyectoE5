@@ -19,18 +19,21 @@
 	"Empresas.h"
 	"Nomina.h"
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
+1653254465 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empleado.cpp
 	"Empleado.h"
 	"DatosEmpleado.h"
+	"DatosConceptos.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empleado.h
 	<iostream>
 
-1649572713 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\main.cpp
 	<iostream>
 	"Empleado.h"
 	"Puestos.h"
@@ -39,8 +42,12 @@
 	"Empresas.h"
 	"Nomina.h"
 	"Usuarios.h"
+	"Nomina.h"
+	"Conceptos.h"
+	<ctime>
+	<vector>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\puestos.cpp
 	"Puestos.h"
 	"datosPuestos.h"
 	<iostream>
@@ -48,8 +55,10 @@
 	<iomanip>
 	<cstdlib>
 	<cstring>
+	<ctime>
+	<vector>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\puestos.h
 	<fstream>
 	<iomanip>
 	<cstdlib>
@@ -238,59 +247,74 @@
 	<iomanip>
 	<cstdlib>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\departamento.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\departamento.h
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\impuestos.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\impuestos.h
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empresas.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\empresas.h
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\nomina.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\nomina.h
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosempleado.cpp
+1653093132 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosempleado.cpp
 	"DatosEmpleado.h"
 	"Empleado.h"
 	<cstring>
 	<iostream>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosempleado.h
+1653093132 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosempleado.h
 	<iostream>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosempresas.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosempresas.cpp
 	"DatosEmpresas.h"
 	"Empresas.h"
 	<cstring>
 	<iostream>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosempresas.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosempresas.h
 	<iostream>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\departamento.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\departamento.cpp
 	"Departamento.h"
 	"DatosDepartamento.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empresas.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\empresas.cpp
 	"Empresas.h"
 	"DatosEmpresas.h"
 	<iostream>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\impuestos.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\impuestos.cpp
 	"Impuestos.h"
 	<iostream>
 	"datosimpuestos.h"
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\nomina.cpp
+1653254465 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\nomina.cpp
 	"Nomina.h"
+	"DatosEmpleado.h"
+	"datosPuestos.h"
+	"DatosDepartamento.h"
+	"DatosConceptos.h"
 	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
 
 1649387106 source:c:\users\monica pérez\music\sistemarrhh\main.cpp
 	<iostream>
@@ -553,9 +577,9 @@
 	<iomanip>
 	<cstdlib>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\usuarios.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\usuarios.h
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datospuestos.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datospuestos.cpp
 	"datosPuestos.h"
 	<iostream>
 	<fstream>
@@ -563,24 +587,26 @@
 	<cstdlib>
 	<cstring>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datospuestos.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datospuestos.h
 	<iostream>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosusuario.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosusuario.cpp
 	"DatosUsuario.h"
 	"Usuarios.h"
 	<cstring>
 	<iostream>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosusuario.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosusuario.h
 	<iostream>
 
-1649572713 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\usuarios.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\usuarios.cpp
 	"Usuarios.h"
 	"DatosUsuario.h"
 	<iostream>
 	<cstdlib>
 	<conio.h>
+	<ctime>
+	<vector>
 	<fstream>
 	<iomanip>
 	<cstdlib>
@@ -874,24 +900,24 @@
 1649546757 c:\users\halld\proyectos\proyectofinal\proyectoe5\sistemarrhh\include\datosimpuestos.h
 	<iostream>
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosdepartamento.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosdepartamento.cpp
 	"DatosDepartamento.h"
 	"Departamentos.h"
 	<cstring>
 	<iostream>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosdepartamento.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosdepartamento.h
 	<iostream>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\departamentos.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\departamentos.h
 
-1652389671 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosimpuestos.cpp
+1652994429 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosimpuestos.cpp
 	"datosimpuestos.h"
 	"Impuestos.h"
 	<cstring>
 	<iostream>
 
-1652389671 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosimpuestos.h
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosimpuestos.h
 	<iostream>
 
 1652994429 source:c:\users\monica pérez\desktop\sistemarrhh\src\datosimpuestos.cpp
@@ -1855,6 +1881,217 @@
 	"DatosEmpleado.h"
 	"DatosConceptos.h"
 	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652994429 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\conceptos.h
+
+1653024352 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653024352 c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\include\datosconceptos.h
+	<iostream>
+
+1653024352 source:c:\users\abima\proyectos\tareasgit\proyectoe5\sistemarrhh\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\main.cpp
+	<iostream>
+	"Empleado.h"
+	"Puestos.h"
+	"Departamento.h"
+	"Impuestos.h"
+	"Empresas.h"
+	"Nomina.h"
+	"Usuarios.h"
+	"Nomina.h"
+	"Conceptos.h"
+	<ctime>
+	<vector>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\empleado.h
+	<iostream>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\departamento.h
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\impuestos.h
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\empresas.h
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\nomina.h
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\usuarios.h
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\conceptos.h
+
+1653024352 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653024352 c:\users\abima\downloads\sistemarrhh (grupo)\include\datosconceptos.h
+	<iostream>
+
+1653264353 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datosdepartamento.cpp
+	"DatosDepartamento.h"
+	"Departamentos.h"
+	<cstring>
+	<iostream>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\datosdepartamento.h
+	<iostream>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\departamentos.h
+
+1653093132 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"Empleado.h"
+	<cstring>
+	<iostream>
+
+1653093132 c:\users\abima\downloads\sistemarrhh (grupo)\include\datosempleado.h
+	<iostream>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datosempresas.cpp
+	"DatosEmpresas.h"
+	"Empresas.h"
+	<cstring>
+	<iostream>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\datosempresas.h
+	<iostream>
+
+1653265006 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datosimpuestos.cpp
+	"datosimpuestos.h"
+	"Impuestos.h"
+	<cstring>
+	<iostream>
+
+1653265006 c:\users\abima\downloads\sistemarrhh (grupo)\include\datosimpuestos.h
+	<iostream>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datospuestos.cpp
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\datospuestos.h
+	<iostream>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\datosusuario.cpp
+	"DatosUsuario.h"
+	"Usuarios.h"
+	<cstring>
+	<iostream>
+
+1652994429 c:\users\abima\downloads\sistemarrhh (grupo)\include\datosusuario.h
+	<iostream>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\departamento.cpp
+	"Departamento.h"
+	"DatosDepartamento.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653266361 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\empleado.cpp
+	"Empleado.h"
+	"DatosEmpleado.h"
+	"DatosConceptos.h"
+	"datosimpuestos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\empresas.cpp
+	"Empresas.h"
+	"DatosEmpresas.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653265006 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+	"datosimpuestos.h"
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653254465 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\nomina.cpp
+	"Nomina.h"
+	"DatosEmpleado.h"
+	"datosPuestos.h"
+	"DatosDepartamento.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\puestos.cpp
+	"Puestos.h"
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<vector>
+
+1652994429 source:c:\users\abima\downloads\sistemarrhh (grupo)\src\usuarios.cpp
+	"Usuarios.h"
+	"DatosUsuario.h"
+	<iostream>
+	<cstdlib>
+	<conio.h>
 	<ctime>
 	<vector>
 	<fstream>
