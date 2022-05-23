@@ -14,11 +14,11 @@ datosimpuestos::datosimpuestos(int valorCodigo, string valorNombre, double valor
 }
 int datosimpuestos::obtenerCodigo() const
 {
-   return codigo;
+   return codigoImpuestos;
 }
 void datosimpuestos::establecerCodigo( int valorCodigo )
 {
-   codigo = valorCodigo;
+   codigoImpuestos = valorCodigo;
 }
 string datosimpuestos::obtenerNombre() const
 {

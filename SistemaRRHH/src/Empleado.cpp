@@ -1,6 +1,7 @@
 #include "Empleado.h"
 #include "DatosEmpleado.h"
 #include "DatosConceptos.h"
+#include "datosimpuestos.h"
 #include <iostream>
 #include <ctime>
 #include <vector>
@@ -29,13 +30,14 @@ int opcionEmp();
 void imprimirRegistroEmp( fstream& );
 void crearArchivoCreditoEmp();
 void mostrarLineaEmp( ostream&, const DatosEmpleado & );
-void nuevoRegistroEmp( fstream& , fstream&);
+void nuevoRegistroEmp( fstream& , fstream&, fstream&);
 int obtenernCodigoEmp( const char * const );
 void modificarRegistroEmp( fstream& );
 void eliminarRegistroEmp( fstream& );
 void consultarRegistroEmp( fstream& );
 void mostrarLineaPantallaEmp( const DatosEmpleado &);
-int obtenernCodigoCon( const char * const );
+int obtenernCodigoImp( const char * );
+int obtenernCodigoCon( const char * );
 
 using namespace std;
 
@@ -49,6 +51,7 @@ Empleado::Empleado()
         exit ( 1 );
     }
     fstream creditoEntradaSalida22( "Conceptos.dat", ios::in | ios::out | ios::binary);
+    fstream creditoEntradaSalida23( "IMPUESTOS.dat", ios::in | ios::out | ios::binary);
     enum Opciones { agregar = 1, nuevo, modificar, eliminar, mostrar, FIN };
     int opcion;
     while ( ( opcion = opcionEmp() ) != FIN ) {
@@ -57,7 +60,7 @@ Empleado::Empleado()
                 imprimirRegistroEmp( creditoEntradaSalida );
             break;
             case nuevo:
-                nuevoRegistroEmp( creditoEntradaSalida, creditoEntradaSalida22 );
+                nuevoRegistroEmp( creditoEntradaSalida, creditoEntradaSalida22, creditoEntradaSalida23 );
             break;
             case modificar:
                 modificarRegistroEmp( creditoEntradaSalida );
@@ -145,7 +148,7 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
     } //FIN DE INSTRUCCION if
 
     archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 16 ) << "Correo"
-       << setw( 10 ) << "Sueldo" << setw( 10 ) << "IGSS" << right << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << setw( 10 ) << "valorHE" << endl;
+       << setw( 10 ) << "Sueldo" << setw( 10 ) << "IGSS" << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << right << setw( 10 ) << "valorHE" << endl;
     leerDeArchivo.seekg( 0 );
 
     DatosEmpleado empleados;
@@ -185,19 +188,18 @@ void crearArchivoCreditoEmp()
 cout<<"\n";
  system("pause");
 }
-void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC )
+void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstream &LeerImp)
 {
     int codigo = obtenernCodigoEmp( "\nEscriba el Codigo del Empleado " );
     insertarEnArchivo.seekg( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
+    datosimpuestos impuestos;
     DatosConceptos conceptos;
     DatosEmpleado empleados;
     insertarEnArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
     leerDeArchivoC.read( reinterpret_cast< char * >( &conceptos ), sizeof( DatosConceptos ) );
-
+    LeerImp.read( reinterpret_cast< char * >( &impuestos ), sizeof( datosimpuestos ) );
 
     if ( empleados.obtenerCodigo() == 0 ) {
-        int codigoConceptos=1;
-        int contadorr=0;
         char apellido[ 15 ];
         char nombre[ 10 ];
         char correo[ 15 ];
@@ -217,61 +219,16 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC )
         cout<<"Escriba las Horas Extras del Empleado: ";
         cin>> horas;
 
-        string res;
 
-        do{
-            cout << "\nDesea agregar otro Concepto? ";
-            cin>>res;
-
-            if (contadorr==1)
-            {
-                codigoConceptos=1;
-                leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
-                impIGSS2 = conceptos.obtenerValor();
-                empleados.establecerIGSS((impIGSS2/100)*sueldo);
-            }
-            if (contadorr==2)
-            {
-                codigoConceptos=2;
-                leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
-                impISR = conceptos.obtenerValor();
-                empleados.establecerISR((impISR/100)*sueldo);
-            }
-            contadorr ++;
-
-            /*impIGSS2 = conceptos.obtenerValor();
-            empleados.establecerIGSS((impIGSS2/100)*sueldo);
-            leerDeArchivoC.write(reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ));
-
-            impISR = conceptos.obtenerValor();
-            empleados.establecerISR((impISR/100)*sueldo);
-            leerDeArchivoC.write(reinterpret_cast< const char * >( &conceptos ), sizeof( DatosConceptos ) );*/
-            }
-        while(res == "si" || res == "SI");
-
-        /*while (contadorr<3)
-        {
-        if (contadorr==1)
-        {
-        int codigoConceptos = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
-        codigoConceptos=1;
-        leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
-
+        int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
         impIGSS2 = conceptos.obtenerValor();
-        empleados.establecerIGSS((impIGSS2/100)*sueldo);
-        contadorr ++;
-        }
-        if (contadorr==2)
-        {
-        int codigoConceptos = obtenernCodigoCon( "\nEscriba el Codigo del Concepto " );
-        codigoConceptos=2;
         leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
+        empleados.establecerIGSS((impIGSS2/100)*sueldo);
 
-        impISR = conceptos.obtenerValor();
+        int codigoImpuestos = obtenernCodigoImp( "\nEscriba el codigo del impuesto que desea modificar" );
+        impISR = impuestos.obtenerCantidad();
+        LeerImp.seekg(( codigoImpuestos - 1 ) * sizeof( datosimpuestos ));
         empleados.establecerISR((impISR/100)*sueldo);
-        contadorr ++;
-        }
-        }*/
 
         empleados.establecerApellido( apellido );
         empleados.establecerNombre( nombre );
@@ -284,7 +241,6 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC )
         insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
         cout<<"\n Empleado agregado Exitosamente..."<<endl;
-
     } //FIN IF
     else
         cerr << "El Empleado con codigo #" << codigo << " ya contiene informacion.\n" << endl;
@@ -449,7 +405,7 @@ cout<<"\n";
 void consultarRegistroEmp( fstream &leerDeArchivo )
 {
     cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 10 )
-    << " Sueldo" << setw( 10 ) << " IGSS" << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << setw( 10 ) << "valorHE" << endl;
+    << " Sueldo" << setw( 10 ) << " IGSS" << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << right << setw( 10 ) << "valorHE" << endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );

@@ -1,2 +1,2 @@
-Codigo    Apellido        Nombre        Correo          Sueldo    IGSS             ISRHorasExtras
-1         oo              jj            gg              4500      0         0                  5
+Codigo    Apellido        Nombre        Correo          Sueldo    IGSS             ISRHorasExtras   valorHE
+1         Tol             Luis          LT@gmil.com    4500      217.35    0         12            281.25
