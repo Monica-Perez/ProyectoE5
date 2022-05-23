@@ -148,7 +148,7 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
     } //FIN DE INSTRUCCION if
 
     archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 16 ) << "Correo"
-       << setw( 10 ) << "Sueldo" << setw( 10 ) << "IGSS" << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << right << setw( 10 ) << "valorHE" << endl;
+       << setw( 10 ) << "Sueldo" << right << setw( 10 ) << "Horas Extras" << endl;
     leerDeArchivo.seekg( 0 );
 
     DatosEmpleado empleados;
@@ -168,11 +168,9 @@ void mostrarLineaEmp( ostream &salida, const DatosEmpleado &registro )
           << setw( 16 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
-          << setw( 10 ) << registro.obtenerSueldo()
-          << setw( 10 ) << registro.obtenerIGSS()
-          << setw( 10 ) << registro.obtenerISR()
-          << setw( 10 ) << registro.obtenerHoras()
-          << setw( 10 ) << setprecision( 2 ) << right << fixed << showpoint << registro.obtenerHE()<< endl;
+          << setw( 10 ) << setprecision( 2 ) << registro.obtenerSueldo()
+          << right << fixed << showpoint
+          << setw( 10 ) << registro.obtenerHoras()<< endl;
 
 }//FIN -MOSTRARLINEA-
 void crearArchivoCreditoEmp()
@@ -206,7 +204,7 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstr
         double sueldo;
         double impIGSS2;
         double impISR;
-        double valorHE;
+        double valorHE, ValHorasEx, ValIgss, ValISR;
         int horas;
         cout<<"Escriba el Apellido del Empleado: ";
         cin>> setw( 15 ) >> apellido;
@@ -237,6 +235,12 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstr
         empleados.establecerHoras( horas );
         empleados.establecerCodigo( codigo );
         empleados.establecerHE((((sueldo/30)/8)*1.5)*horas);
+
+        ValHorasEx=empleados.obtenerHE();
+        ValIgss=empleados.obtenerIGSS();
+        ValISR=empleados.obtenerISR();
+
+        empleados.establecerTotalF(sueldo+ValHorasEx-ValIgss-ValISR);
 
         insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -405,7 +409,7 @@ cout<<"\n";
 void consultarRegistroEmp( fstream &leerDeArchivo )
 {
     cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 10 )
-    << " Sueldo" << setw( 10 ) << " IGSS" << setw( 10 ) << " ISR" << setw( 10 ) << "HorasExtras" << right << setw( 10 ) << "valorHE" << endl;
+    << " Sueldo" << setw( 10 ) << " Horas Extras" << endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -425,11 +429,8 @@ void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
           << setw( 10 ) << registro.obtenerSueldo()
-          << setw( 10 ) << registro.obtenerIGSS()
-          << setw( 10 ) << registro.obtenerISR()
-          << setw( 10 ) << registro.obtenerHoras()
-          << setw( 10 ) << setprecision( 2 ) << right << fixed
-          << showpoint << registro.obtenerHE()<< endl;
+          << right << fixed << showpoint
+          << setw( 10 ) << registro.obtenerHoras()<< endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 Empleado::~Empleado()
