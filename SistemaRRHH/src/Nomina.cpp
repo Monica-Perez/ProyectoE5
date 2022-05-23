@@ -89,7 +89,7 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 void consultarRegistroPla( fstream &leerDeArchivo, fstream &leer2 , fstream &leer3)
 {
     cout << left << setw( 10 ) << "\nCodigo" << setw( 14 ) << " Apellido" << setw( 15 ) << " Nombre"  << setw( 17 ) << "Departamento" << setw( 14 ) << "Puesto"
-    <<  setw( 10 ) << " Sueldo" << setw( 10 ) << "IGSS"<< setw( 10 ) << "Horas Extras"<< setw( 10 ) << "  Valor horas"<< endl;
+    <<  setw( 10 ) << "Sueldo" << setw( 10 ) << "Horas Extras "<< setw( 10 ) << "Valor Horas"<< setw( 10 ) << "  IGSS"<< setw( 10 ) << "  ISR"<< setw( 10 ) << " Total"<< endl;
     DatosEmpleado empleados;
     datosPuestos puestos;
     DatosDepartamento Departamentos;
@@ -114,11 +114,14 @@ void mostrarLineaPantallaPla( const DatosEmpleado &registro, const datosPuestos 
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 17 ) << regdep.obtenerApellido().data() //DEPARTAMENTO
           << setw( 11 ) << regpu.obtenerNombre().data()
-          << setw( 12 ) << setprecision( 3 ) << fixed
+          << setw( 12 ) << setprecision( 2 ) << fixed
           << showpoint << registro.obtenerSueldo()
-          << setw( 10 ) << setprecision( 2 ) << registro.obtenerIGSS()
+          << setw( 14 ) <<  registro.obtenerHoras()
           << setw( 14 ) << registro.obtenerHE()
-          << setw ( 14 ) << registro.obtenerHoras()<< right << showpoint<< endl;
+          << setw( 10 ) << setprecision( 2 ) << registro.obtenerIGSS()
+          << setw( 10 ) << setprecision( 2 ) << registro.obtenerISR()
+          << setw( 10 ) << setprecision( 2 ) << registro.obtenerTotalF()
+          << right << showpoint<< endl;
 } //FIN -MOSTRARLINEAENOANTALLA-
 
 

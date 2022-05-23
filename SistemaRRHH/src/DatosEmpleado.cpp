@@ -5,7 +5,7 @@
 
 using std::string;
 
-DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, double valorSueldo, double valorIGSS, double valorISR , int valorHoras, double valorHorasExtras)
+DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, double valorSueldo, double valorIGSS, double valorISR , int valorHoras, double valorHorasExtras, double TotalFilas)
 {
     establecerCodigo( valorCodigo );
     establecerApellido( valorApellido );
@@ -16,6 +16,7 @@ DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valor
     establecerISR (valorISR);
     establecerHoras (valorHoras);
     establecerHE (valorHorasExtras);
+    establecerTotalF (TotalFilas);
 
 }
 int DatosEmpleado::obtenerCodigo() const
@@ -112,6 +113,15 @@ double DatosEmpleado::obtenerHE() const
 void DatosEmpleado::establecerHE( double valorHorasExtras )
 {
    valorHE = valorHorasExtras;
+}
+
+double DatosEmpleado::obtenerTotalF() const
+{
+   return totalF;
+}
+void DatosEmpleado::establecerTotalF( double TotalFilas )
+{
+   totalF = TotalFilas;
 }
 
 DatosEmpleado::~DatosEmpleado()

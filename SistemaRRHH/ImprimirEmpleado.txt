@@ -1,2 +1,3 @@
-Codigo    Apellido        Nombre        Correo          Sueldo    IGSS             ISRHorasExtras   valorHE
-1         Tol             Luis          LT@gmil.com    4500      217.35    0         12            281.25
+Codigo    Apellido        Nombre        Correo          Sueldo    Horas Extras
+1         Rosales         Jose          JR@gmail.com    4.5e+03           16
+2         Rosales         Pedro         RP@gmail.com    6800.00            3
