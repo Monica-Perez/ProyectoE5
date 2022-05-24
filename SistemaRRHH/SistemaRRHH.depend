@@ -2288,3 +2288,573 @@
 	<iomanip>
 	<cstdlib>
 
+1652916027 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\main.cpp
+	<iostream>
+	"Empleado.h"
+	"Puestos.h"
+	"Departamento.h"
+	"Impuestos.h"
+	"Empresas.h"
+	"Nomina.h"
+	"Usuarios.h"
+	"Nomina.h"
+	"Conceptos.h"
+	<ctime>
+	<vector>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\empleado.h
+	<iostream>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\departamento.h
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\impuestos.h
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\empresas.h
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\nomina.h
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\usuarios.h
+
+1652916027 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\conceptos.h
+
+1653093420 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653093420 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datosconceptos.h
+	<iostream>
+
+1653093420 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1652907804 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datosdepartamento.cpp
+	"DatosDepartamento.h"
+	"Departamentos.h"
+	<cstring>
+	<iostream>
+
+1652907804 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datosdepartamento.h
+	<iostream>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\departamentos.h
+
+1652834380 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datosempresas.cpp
+	"DatosEmpresas.h"
+	"Empresas.h"
+	<cstring>
+	<iostream>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datosempresas.h
+	<iostream>
+
+1653347569 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datosimpuestos.cpp
+	"datosimpuestos.h"
+	"Impuestos.h"
+	<cstring>
+	<iostream>
+
+1653347569 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datosimpuestos.h
+	<iostream>
+
+1652834380 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datospuestos.cpp
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datospuestos.h
+	<iostream>
+
+1652834380 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datosusuario.cpp
+	"DatosUsuario.h"
+	"Usuarios.h"
+	<cstring>
+	<iostream>
+
+1652834379 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datosusuario.h
+	<iostream>
+
+1652916027 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\departamento.cpp
+	"Departamento.h"
+	"DatosDepartamento.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652907804 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\empresas.cpp
+	"Empresas.h"
+	"DatosEmpresas.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653347569 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+	"datosimpuestos.h"
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653347569 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\nomina.cpp
+	"Nomina.h"
+	"DatosEmpleado.h"
+	"datosPuestos.h"
+	"DatosDepartamento.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653349115 c:\users\abiva\desktop\proyectoe5\sistemarrhh\include\datosempleado.h
+	<iostream>
+
+1652907804 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\puestos.cpp
+	"Puestos.h"
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<vector>
+
+1652834380 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\usuarios.cpp
+	"Usuarios.h"
+	"DatosUsuario.h"
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653348961 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"Empleado.h"
+	<cstring>
+	<iostream>
+
+1653351155 source:c:\users\abiva\desktop\proyectoe5\sistemarrhh\src\empleado.cpp
+	"Empleado.h"
+	"DatosEmpleado.h"
+	"DatosConceptos.h"
+	"datosimpuestos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652916027 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\main.cpp
+	<iostream>
+	"Empleado.h"
+	"Puestos.h"
+	"Departamento.h"
+	"Impuestos.h"
+	"Empresas.h"
+	"Nomina.h"
+	"Usuarios.h"
+	"Nomina.h"
+	"Conceptos.h"
+	<ctime>
+	<vector>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\empleado.h
+	<iostream>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\departamento.h
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\impuestos.h
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\empresas.h
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\nomina.h
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\usuarios.h
+
+1652916027 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\conceptos.h
+
+1653093420 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653093420 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datosconceptos.h
+	<iostream>
+
+1653093420 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1652907804 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datosdepartamento.cpp
+	"DatosDepartamento.h"
+	"Departamentos.h"
+	<cstring>
+	<iostream>
+
+1652907804 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datosdepartamento.h
+	<iostream>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\departamentos.h
+
+1653348961 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"Empleado.h"
+	<cstring>
+	<iostream>
+
+1653349115 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datosempleado.h
+	<iostream>
+
+1652834380 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datosempresas.cpp
+	"DatosEmpresas.h"
+	"Empresas.h"
+	<cstring>
+	<iostream>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datosempresas.h
+	<iostream>
+
+1653347569 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datosimpuestos.cpp
+	"datosimpuestos.h"
+	"Impuestos.h"
+	<cstring>
+	<iostream>
+
+1653347569 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datosimpuestos.h
+	<iostream>
+
+1652834380 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datospuestos.cpp
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datospuestos.h
+	<iostream>
+
+1652834380 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\datosusuario.cpp
+	"DatosUsuario.h"
+	"Usuarios.h"
+	<cstring>
+	<iostream>
+
+1652834379 c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\include\datosusuario.h
+	<iostream>
+
+1652916027 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\departamento.cpp
+	"Departamento.h"
+	"DatosDepartamento.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653352885 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\empleado.cpp
+	"Empleado.h"
+	"DatosEmpleado.h"
+	"DatosConceptos.h"
+	"datosimpuestos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652907804 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\empresas.cpp
+	"Empresas.h"
+	"DatosEmpresas.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653347569 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+	"datosimpuestos.h"
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653347569 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\nomina.cpp
+	"Nomina.h"
+	"DatosEmpleado.h"
+	"datosPuestos.h"
+	"DatosDepartamento.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652907804 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\puestos.cpp
+	"Puestos.h"
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<vector>
+
+1652834380 source:c:\users\monica pérez\desktop\proyectoe5\sistemarrhh\src\usuarios.cpp
+	"Usuarios.h"
+	"DatosUsuario.h"
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652916027 source:c:\users\abiva\downloads\sistemarrhh\main.cpp
+	<iostream>
+	"Empleado.h"
+	"Puestos.h"
+	"Departamento.h"
+	"Impuestos.h"
+	"Empresas.h"
+	"Nomina.h"
+	"Usuarios.h"
+	"Nomina.h"
+	"Conceptos.h"
+	<ctime>
+	<vector>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\empleado.h
+	<iostream>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\departamento.h
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\impuestos.h
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\empresas.h
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\nomina.h
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\usuarios.h
+
+1652916027 c:\users\abiva\downloads\sistemarrhh\include\conceptos.h
+
+1653093420 source:c:\users\abiva\downloads\sistemarrhh\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653093420 c:\users\abiva\downloads\sistemarrhh\include\datosconceptos.h
+	<iostream>
+
+1653093420 source:c:\users\abiva\downloads\sistemarrhh\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1652907804 source:c:\users\abiva\downloads\sistemarrhh\src\datosdepartamento.cpp
+	"DatosDepartamento.h"
+	"Departamentos.h"
+	<cstring>
+	<iostream>
+
+1652907804 c:\users\abiva\downloads\sistemarrhh\include\datosdepartamento.h
+	<iostream>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\departamentos.h
+
+1653348961 source:c:\users\abiva\downloads\sistemarrhh\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"Empleado.h"
+	<cstring>
+	<iostream>
+
+1653349115 c:\users\abiva\downloads\sistemarrhh\include\datosempleado.h
+	<iostream>
+
+1652834380 source:c:\users\abiva\downloads\sistemarrhh\src\datosempresas.cpp
+	"DatosEmpresas.h"
+	"Empresas.h"
+	<cstring>
+	<iostream>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\datosempresas.h
+	<iostream>
+
+1653347569 source:c:\users\abiva\downloads\sistemarrhh\src\datosimpuestos.cpp
+	"datosimpuestos.h"
+	"Impuestos.h"
+	<cstring>
+	<iostream>
+
+1653347569 c:\users\abiva\downloads\sistemarrhh\include\datosimpuestos.h
+	<iostream>
+
+1652834380 source:c:\users\abiva\downloads\sistemarrhh\src\datospuestos.cpp
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\datospuestos.h
+	<iostream>
+
+1652834380 source:c:\users\abiva\downloads\sistemarrhh\src\datosusuario.cpp
+	"DatosUsuario.h"
+	"Usuarios.h"
+	<cstring>
+	<iostream>
+
+1652834379 c:\users\abiva\downloads\sistemarrhh\include\datosusuario.h
+	<iostream>
+
+1652916027 source:c:\users\abiva\downloads\sistemarrhh\src\departamento.cpp
+	"Departamento.h"
+	"DatosDepartamento.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652907804 source:c:\users\abiva\downloads\sistemarrhh\src\empresas.cpp
+	"Empresas.h"
+	"DatosEmpresas.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653347569 source:c:\users\abiva\downloads\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+	"datosimpuestos.h"
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653354063 source:c:\users\abiva\downloads\sistemarrhh\src\nomina.cpp
+	"Nomina.h"
+	"DatosEmpleado.h"
+	"datosPuestos.h"
+	"DatosDepartamento.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1652907804 source:c:\users\abiva\downloads\sistemarrhh\src\puestos.cpp
+	"Puestos.h"
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<vector>
+
+1652834380 source:c:\users\abiva\downloads\sistemarrhh\src\usuarios.cpp
+	"Usuarios.h"
+	"DatosUsuario.h"
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653353677 source:c:\users\abiva\downloads\sistemarrhh\src\empleado.cpp
+	"Empleado.h"
+	"DatosEmpleado.h"
+	"DatosConceptos.h"
+	"datosimpuestos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+

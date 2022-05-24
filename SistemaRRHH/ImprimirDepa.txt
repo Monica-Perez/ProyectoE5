@@ -1,3 +1,4 @@
 Codigo    NombreDepartamento                Area
 1         Finanzas        Contabilidad        
 2         Finanzas        Administracion†    
+3         sistemas        computo             
