@@ -8,7 +8,7 @@ class DatosEmpleado
 {
     public:
         virtual ~DatosEmpleado();
-        DatosEmpleado( int = 0, string = "", string = "", string = "", double = 0.0, double=0.0, double=0.0, int=0, double=0.0, double=0.0);
+        DatosEmpleado( int = 0, string = "", string = "", string = "", double = 0.0, double=0.0, double=0.0, int=0, double=0.0, double=0.0 , double= 0.0);
 
         void establecerCodigo( int );
         int obtenerCodigo() const;
@@ -37,8 +37,12 @@ class DatosEmpleado
         void establecerHE( double );
         double obtenerHE() const;
 
+        void establecerAnticipo ( double );
+        double obtenerAnticipo () const;
+
         void establecerTotalF( double );
         double obtenerTotalF() const;
+
 
     protected:
 
@@ -53,6 +57,7 @@ class DatosEmpleado
         int horas;
         double valorHE;
         double totalF;
+        double anticipo;
 };
 
 #endif // DATOSEMPLEADO_H

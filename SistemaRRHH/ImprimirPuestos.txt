@@ -1,3 +1,4 @@
 Codigo    Estatus         Nombre        
 1         Habilitado      Contralor     
 2         Habilitado      Contador      
+3         habilitado      auxiliar      

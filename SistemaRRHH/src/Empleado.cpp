@@ -147,8 +147,8 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
 
     } //FIN DE INSTRUCCION if
 
-    archivoImprimirSalida << left << setw( 10 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 16 ) << "Correo"
-       << setw( 10 ) << "Sueldo" << right << setw( 10 ) << "Horas Extras" << endl;
+    archivoImprimirSalida << left << setw( 14 ) << "Codigo" << setw( 16 )<< "Apellido" << setw( 14 ) << "Nombre" << setw( 20 ) << "Correo"
+       << setw( 16 ) << "Sueldo" << right << setw( 12 ) << "Horas Extras" << endl;
     leerDeArchivo.seekg( 0 );
 
     DatosEmpleado empleados;
@@ -164,12 +164,11 @@ void imprimirRegistroEmp( fstream &leerDeArchivo )
 } //FIN DE LA FUNCION -IMPRIMIR REGISTRO-
 void mostrarLineaEmp( ostream &salida, const DatosEmpleado &registro )
 {
-   salida << left << setw( 10 ) << registro.obtenerCodigo()
+   salida << left << setw( 18 ) << registro.obtenerCodigo()
           << setw( 16 ) << registro.obtenerApellido().data()
-          << setw( 14 ) << registro.obtenerNombre().data()
-          << setw( 16 ) << registro.obtenerCorreo().data()
-          << setw( 10 ) << setprecision( 2 ) << registro.obtenerSueldo()
-          << right << fixed << showpoint
+          << setw( 16 ) << registro.obtenerNombre().data()
+          << setw( 15 ) << registro.obtenerCorreo().data()
+          << setw( 15 ) << registro.obtenerSueldo()
           << setw( 10 ) << registro.obtenerHoras()<< endl;
 
 }//FIN -MOSTRARLINEA-
@@ -206,6 +205,7 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstr
         double impISR;
         double valorHE, ValHorasEx, ValIgss, ValISR;
         int horas;
+        double anticipo, sueldo2;
         cout<<"Escriba el Apellido del Empleado: ";
         cin>> setw( 15 ) >> apellido;
         cout<<"Escriba el Nombre del Empleado: ";
@@ -216,40 +216,42 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstr
         cin>> sueldo;
         cout<<"Escriba las Horas Extras del Empleado: ";
         cin>> horas;
-
-
-        int codigoConceptos = obtenernCodigoCon( "\nEscriba el codigo del Concepto que desea Modificar" );
-        impIGSS2 = conceptos.obtenerValor();
-        leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
-        empleados.establecerIGSS((impIGSS2/100)*sueldo);
-
-        int codigoImpuestos = obtenernCodigoImp( "\nEscriba el codigo del impuesto que desea modificar" );
-        impISR = impuestos.obtenerCantidad();
-        LeerImp.seekg(( codigoImpuestos - 1 ) * sizeof( datosimpuestos ));
-        empleados.establecerISR((impISR/100)*sueldo);
+        cout<<"Escriba el anticipo del empleado: ";
+        cin>> anticipo;
 
         empleados.establecerApellido( apellido );
         empleados.establecerNombre( nombre );
         empleados.establecerCorreo( correo );
         empleados.establecerSueldo( sueldo );
+        sueldo2=empleados.obtenerSueldo();
         empleados.establecerHoras( horas );
-        empleados.establecerCodigo( codigo );
-        empleados.establecerHE((((sueldo/30)/8)*1.5)*horas);
+        empleados.establecerHE((((sueldo2/30)/8)*1.5)*horas);
+        empleados.establecerAnticipo( anticipo );
+
+        int codigoConceptos = 1;
+        impIGSS2 = conceptos.obtenerValor();
+        leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
+        empleados.establecerIGSS((impIGSS2/100)*sueldo2);
+
+        int codigoImpuestos = 1;
+        impISR = impuestos.obtenerCantidad();
+        LeerImp.seekg(( codigoImpuestos - 1 ) * sizeof( datosimpuestos ));
+        empleados.establecerISR((impISR/100)*sueldo2);
 
         ValHorasEx=empleados.obtenerHE();
         ValIgss=empleados.obtenerIGSS();
         ValISR=empleados.obtenerISR();
-
-        empleados.establecerTotalF(sueldo+ValHorasEx-ValIgss-ValISR);
-
+        double ValAnt=empleados.obtenerAnticipo();
+        empleados.establecerTotalF(sueldo+ValHorasEx-ValIgss-ValISR-ValAnt);
+        empleados.establecerCodigo( codigo );
         insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
         cout<<"\n Empleado agregado Exitosamente..."<<endl;
     } //FIN IF
     else
         cerr << "El Empleado con codigo #" << codigo << " ya contiene informacion.\n" << endl;
-cout<<"\n";
- system("pause");
+    cout<<"\n";
+    system("pause");
 } //FIN REGISTRO
 int obtenernCodigoEmp( const char * const indicador )
 {
@@ -408,8 +410,8 @@ cout<<"\n";
 } //FIN -ELIMINARREGISTRO-
 void consultarRegistroEmp( fstream &leerDeArchivo )
 {
-    cout << left << setw( 10 ) << "\nCodigo" << setw( 16 ) << " Apellido" << setw( 14 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 10 )
-    << " Sueldo" << setw( 10 ) << " Horas Extras" << endl;
+    cout << left << setw( 10 ) << "\nCodigo" << setw( 14 ) << " Apellido" << setw( 12 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 15 )
+    << " Sueldo" << setw( 10 ) << "Horas Extras " << setw( 13 ) << "Anticipo"<< endl;
     leerDeArchivo.seekg( 0 );
     DatosEmpleado empleados;
     leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -419,18 +421,18 @@ void consultarRegistroEmp( fstream &leerDeArchivo )
             leerDeArchivo.read( reinterpret_cast< char * >( &empleados ), sizeof( DatosEmpleado ) );
 
    } //FIN WHILE
-cout<<"\n";
- system("pause");
+    cout<<"\n";
+    system("pause");
 } //FIN CONSULTAR REGISTRO
 void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
 {
    cout << left <<" "<< setw( 10 ) << registro.obtenerCodigo()
-          << setw( 16 ) << registro.obtenerApellido().data()
-          << setw( 14 ) << registro.obtenerNombre().data()
+          << setw( 14 ) << registro.obtenerApellido().data()
+          << setw( 12 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
-          << setw( 10 ) << registro.obtenerSueldo()
-          << right << fixed << showpoint
-          << setw( 10 ) << registro.obtenerHoras()<< endl;
+          << setw( 15 ) << registro.obtenerSueldo()
+          << setw( 12 ) << registro.obtenerHoras()
+          << setw( 15 ) << registro.obtenerAnticipo() << endl;
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 Empleado::~Empleado()
