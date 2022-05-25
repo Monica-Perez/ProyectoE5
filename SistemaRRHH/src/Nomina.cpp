@@ -38,42 +38,42 @@ Nomina::Nomina()
 
     system("cls");
     time_t now = time(0);
-        tm * time = localtime(&now);
+    tm * time = localtime(&now);
 
-vector<string> dia_semana;
-dia_semana.push_back("Domingo");
-dia_semana.push_back("Lunes");
-dia_semana.push_back("Martes");
-dia_semana.push_back("Miercoles");
-dia_semana.push_back("Jueves");
-dia_semana.push_back("Viernes");
-dia_semana.push_back("Sabado");
+    vector<string> dia_semana;
+    dia_semana.push_back("Domingo");
+    dia_semana.push_back("Lunes");
+    dia_semana.push_back("Martes");
+    dia_semana.push_back("Miercoles");
+    dia_semana.push_back("Jueves");
+    dia_semana.push_back("Viernes");
+    dia_semana.push_back("Sabado");
 
-vector<string> mes;
-mes.push_back("Enero");
-mes.push_back("Febrero");
-mes.push_back("Marzo");
-mes.push_back("Abril");
-mes.push_back("Mayo");
-mes.push_back("Junio");
-mes.push_back("Julio");
-mes.push_back("Agosto");
-mes.push_back("Septiembre");
-mes.push_back("Octubre");
-mes.push_back("Noviembre");
-mes.push_back("Diciembre");
+    vector<string> mes;
+    mes.push_back("Enero");
+    mes.push_back("Febrero");
+    mes.push_back("Marzo");
+    mes.push_back("Abril");
+    mes.push_back("Mayo");
+    mes.push_back("Junio");
+    mes.push_back("Julio");
+    mes.push_back("Agosto");
+    mes.push_back("Septiembre");
+    mes.push_back("Octubre");
+    mes.push_back("Noviembre");
+    mes.push_back("Diciembre");
 
-int year = 1900 + time->tm_year;
+    int year = 1900 + time->tm_year;
 
-//Formato=hoy miercoles, 27 de mayo del 2015
-cout<< "\n";
-cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
-cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
-cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
+    //Formato=hoy miercoles, 27 de mayo del 2015
+    cout<< "\n";
+    cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
+    cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
+    cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
-    cout<<"\n\t\t\t\t---------------"<<endl;
-	cout<<"\t\t\t\t |   NOMINA  |"<<endl;
-	cout<<"\t\t\t\t---------------"<<endl<<endl;
+    cout<<"\n\t\t\t\t\t\t\t  ----------------------------"<<endl;
+	cout<<"\t\t\t\t\t\t\t   |   NOMINA DE EMPLEADOS  |"<<endl;
+	cout<<"\t\t\t\t\t\t\t  ----------------------------"<<endl<<endl;
 
     fstream creditoEntradaSalida( "emp.dat", ios::in | ios::out | ios::binary);
     fstream creditoEntradaSalida2( "puest.dat", ios::in | ios::out | ios::binary);
@@ -89,7 +89,7 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 void consultarRegistroPla( fstream &leerDeArchivo, fstream &leer2 , fstream &leer3)
 {
     cout << left << setw( 10 ) << "\nCodigo" << setw( 14 ) << " Apellido" << setw( 15 ) << " Nombre"  << setw( 17 ) << "Departamento" << setw( 14 ) << "Puesto"
-    <<  setw( 10 ) << "Sueldo" << setw( 10 ) << "Horas Extras "<< setw( 10 ) << "Valor Horas"<< setw( 10 ) << "  IGSS"<< setw( 10 ) << "  ISR"<< setw( 10 ) << " Anticipo "<< setw( 10 ) << " Total"<< endl;
+    <<  setw( 10 ) << "Sueldo" << setw( 15 ) << "Horas Extras "<< setw( 14 ) << "Valor Horas"<< setw( 10 ) << "  IGSS"<< setw( 10 ) << "  ISR"<< setw( 11 ) << " Anticipo "<< setw( 11 ) << " Total"<< endl;
     DatosEmpleado empleados;
     datosPuestos puestos;
     DatosDepartamento Departamentos;
@@ -113,7 +113,7 @@ void mostrarLineaPantallaPla( const DatosEmpleado &registro, const datosPuestos 
           << setw( 14 ) << registro.obtenerApellido().data()
           << setw( 14 ) << registro.obtenerNombre().data()
           << setw( 17 ) << regdep.obtenerApellido().data() //DEPARTAMENTO
-          << setw( 11 ) << regpu.obtenerNombre().data()
+          << setw( 14 ) << regpu.obtenerNombre().data() //PUESTO
           << setw( 12 ) << setprecision( 2 ) << fixed
           << showpoint << registro.obtenerSueldo()
           << setw( 14 ) <<  registro.obtenerHoras()
