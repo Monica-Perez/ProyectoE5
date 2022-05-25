@@ -119,10 +119,10 @@ int opcionEmp(){
     cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
 
-    cout<<"\n\t\t\t---------------------------------"<<endl;
-    cout<<"\n\t\t\t\t------------------"<<endl;
-	cout<<"\t\t\t\t |   EMPLEADOS  |"<<endl;
-	cout<<"\t\t\t\t------------------"<<endl;
+    cout<<"\n\t\t\t-----------------------------------------------";
+    cout<<"\n\t\t\t\t     -------------------"<<endl;
+	cout<<"\t\t\t\t      |   EMPLEADOS   |"<<endl;
+	cout<<"\t\t\t\t     -------------------"<<endl;
 
     cout<< "\n\n\t\t\t 1. Guardar archivo de texto para Imprimirlo" << endl
         << "\t\t\t 2. Agregar Empleado" << endl
@@ -130,7 +130,7 @@ int opcionEmp(){
         << "\t\t\t 4. Eliminar Empleado" << endl
         << "\t\t\t 5. Mostrar Lista de Empleados" << endl
         << "\t\t\t 6. Regresar al Menu Principal" << endl
-        <<"\n\t\t\t---------------------------------"<<endl
+        <<"\n\t\t\t-----------------------------------------------"<<endl
         << "\n\t\t\tIngrese su opcion: ";
     int opcionMenu ;
 
@@ -182,8 +182,8 @@ void crearArchivoCreditoEmp()
     DatosEmpleado empleadoEnBlanco;
     for ( int i = 0; i < 100; i++ )
         creditoSalida.write(reinterpret_cast< const char * >( &empleadoEnBlanco ), sizeof( DatosEmpleado ) );
-cout<<"\n";
- system("pause");
+    cout<<"\n";
+    system("pause");
 }
 void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstream &LeerImp)
 {

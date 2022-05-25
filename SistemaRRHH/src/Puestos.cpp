@@ -71,49 +71,45 @@ Puestos::Puestos()
 
 int Puestos::escribirOption()
 {
+    system("cls");
+    time_t now = time(0);
+    tm * time = localtime(&now);
 
- system("cls");
-time_t now = time(0);
-        tm * time = localtime(&now);
+    vector<string> dia_semana;
+    dia_semana.push_back("Domingo");
+    dia_semana.push_back("Lunes");
+    dia_semana.push_back("Martes");
+    dia_semana.push_back("Miercoles");
+    dia_semana.push_back("Jueves");
+    dia_semana.push_back("Viernes");
+    dia_semana.push_back("Sabado");
 
-vector<string> dia_semana;
-dia_semana.push_back("Domingo");
-dia_semana.push_back("Lunes");
-dia_semana.push_back("Martes");
-dia_semana.push_back("Miercoles");
-dia_semana.push_back("Jueves");
-dia_semana.push_back("Viernes");
-dia_semana.push_back("Sabado");
+    vector<string> mes;
+    mes.push_back("Enero");
+    mes.push_back("Febrero");
+    mes.push_back("Marzo");
+    mes.push_back("Abril");
+    mes.push_back("Mayo");
+    mes.push_back("Junio");
+    mes.push_back("Julio");
+    mes.push_back("Agosto");
+    mes.push_back("Septiembre");
+    mes.push_back("Octubre");
+    mes.push_back("Noviembre");
+    mes.push_back("Diciembre");
 
-vector<string> mes;
-mes.push_back("Enero");
-mes.push_back("Febrero");
-mes.push_back("Marzo");
-mes.push_back("Abril");
-mes.push_back("Mayo");
-mes.push_back("Junio");
-mes.push_back("Julio");
-mes.push_back("Agosto");
-mes.push_back("Septiembre");
-mes.push_back("Octubre");
-mes.push_back("Noviembre");
-mes.push_back("Diciembre");
+    int year = 1900 + time->tm_year;
 
-int year = 1900 + time->tm_year;
+    //Formato=hoy miercoles, 27 de mayo del 2015
+    cout<< "\n";
+    cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
+    cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
+    cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
 
-//Formato=hoy miercoles, 27 de mayo del 2015
-cout<< "\n";
-cout << "Hoy " << dia_semana[time->tm_wday] << ", ";
-cout << time->tm_mday << " de " << mes[time->tm_mon] << " del " << year << endl;
-cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
-
-    cout<<"\n\t\t\t---------------------------------"<<endl;
-    cout<<"\t\t\t\t----------------"<<endl;
-	cout<<"\t\t\t\t |   PUESTOS  |"<<endl;
-	cout<<"\t\t\t\t----------------"<<endl;
-    cout<<"\t\t\t   --------------------------"<<endl;
-	cout<<"\t\t\t    |   Modulo de Puestos  |"<<endl;
-	cout<<"\t\t\t   --------------------------"<<endl;
+    cout<<"\n\t\t\t-----------------------------------------------"<<endl;
+    cout<<"\t\t\t\t       ----------------"<<endl;
+	cout<<"\t\t\t\t        |   PUESTOS  |"<<endl;
+	cout<<"\t\t\t\t       ----------------"<<endl;
 
     cout<< "\n\n\t\t\t 1. Crear un archivo de texto para imprimir" << endl
         << "\t\t\t 2. Crear un nuevo puesto de trabajo" << endl
@@ -121,7 +117,7 @@ cout << time->tm_hour << ":" << time->tm_min << ":" << time->tm_sec << endl;
         << "\t\t\t 4. Eliminar puesto de trabajo" << endl
         << "\t\t\t 5. Editar puesto de trabajo" << endl
         << "\t\t\t 6. Regresar al Menu Principal" << endl
-        << "\n\t\t\t---------------------------------"<<endl
+        <<"\n\t\t\t-----------------------------------------------"
         << "\n\t\t\tIngrese su opcion: ";
    int opcionMenuP;
    cin >> opcionMenuP; // recibir opción del usuario

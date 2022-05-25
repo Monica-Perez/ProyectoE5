@@ -1,4 +1,4 @@
 Codigo        Apellido        Nombre        Correo              Sueldo          Horas Extras
 1                 Rosales         Maria           MR@gmail.com   5600           3         
-2                 m               grgf            fwf            6300           6         
+2                 Lopez           Juan            JL@gmail.com   6300           6         
 3                 Gomez           Pablo           pg7@gmail.com  3000           3         
