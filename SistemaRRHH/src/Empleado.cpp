@@ -40,7 +40,7 @@ int obtenernCodigoImp( const char * );
 int obtenernCodigoCon( const char * );
 
 using namespace std;
-
+// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
 Empleado::Empleado()
 {
     fstream creditoEntradaSalida( "emp.dat", ios::in | ios::out | ios::binary);
@@ -50,6 +50,7 @@ Empleado::Empleado()
         cout <<  "Archivo creado satisfactoriamente, pruebe de nuevo\n";
         exit ( 1 );
     }
+
     fstream creditoEntradaSalida22( "Conceptos.dat", ios::in | ios::out | ios::binary);
     fstream creditoEntradaSalida23( "IMPUESTOS.dat", ios::in | ios::out | ios::binary);
     enum Opciones { agregar = 1, nuevo, modificar, eliminar, mostrar, FIN };
@@ -84,7 +85,7 @@ Empleado::Empleado()
 int opcionEmp(){
     system("cls");
 
-    time_t now = time(0);
+    time_t now = time(0);//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
     tm * time = localtime(&now);
 
     vector<string> dia_semana;
@@ -120,7 +121,7 @@ int opcionEmp(){
 
 
     cout<<"\n\t\t\t-----------------------------------------------";
-    cout<<"\n\t\t\t\t     -------------------"<<endl;
+    cout<<"\n\t\t\t\t   -------------------"<<endl;
 	cout<<"\t\t\t\t      |   EMPLEADOS   |"<<endl;
 	cout<<"\t\t\t\t     -------------------"<<endl;
 
@@ -203,7 +204,7 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstr
         double sueldo;
         double impIGSS2;
         double impISR;
-        double valorHE, ValHorasEx, ValIgss, ValISR;
+        double valorHE, ValHorasEx, ValIgss, ValISR;// Alan Abimael Galicia Ruano - 9959-21-3632
         int horas;
         double anticipo, sueldo2;
         cout<<"Escriba el Apellido del Empleado: ";
@@ -215,34 +216,35 @@ void nuevoRegistroEmp( fstream &insertarEnArchivo, fstream &leerDeArchivoC, fstr
         cout<<"Escriba el Sueldo del Empleado: ";
         cin>> sueldo;
         cout<<"Escriba las Horas Extras del Empleado: ";
-        cin>> horas;
+        cin>> horas;// Monica Gabriela Perez Velásquez - 9959-21-1840
         cout<<"Escriba el anticipo del empleado: ";
-        cin>> anticipo;
+        cin>> anticipo;//Abigail Elizabeth Vásquez Herrera - 9959-21-13777
 
         empleados.establecerApellido( apellido );
         empleados.establecerNombre( nombre );
         empleados.establecerCorreo( correo );
         empleados.establecerSueldo( sueldo );
         sueldo2=empleados.obtenerSueldo();
-        empleados.establecerHoras( horas );
-        empleados.establecerHE((((sueldo2/30)/8)*1.5)*horas);
-        empleados.establecerAnticipo( anticipo );
-
+        empleados.establecerHoras( horas );// Monica Gabriela Perez Velásquez - 9959-21-1840
+        empleados.establecerHE((((sueldo2/30)/8)*1.5)*horas);// Alan Abimael Galicia Ruano - 9959-21-3632
+        empleados.establecerAnticipo( anticipo );//Abigail Elizabeth Vásquez Herrera - 9959-21-13777
+        // Alan Abimael Galicia Ruano - 9959-21-3632
         int codigoConceptos = 1;
         impIGSS2 = conceptos.obtenerValor();
         leerDeArchivoC.seekg(( codigoConceptos - 1 ) * sizeof( DatosConceptos ));
         empleados.establecerIGSS((impIGSS2/100)*sueldo2);
-
+        // Alan Abimael Galicia Ruano - 9959-21-3632
         int codigoImpuestos = 1;
         impISR = impuestos.obtenerCantidad();
         LeerImp.seekg(( codigoImpuestos - 1 ) * sizeof( datosimpuestos ));
         empleados.establecerISR((impISR/100)*sueldo2);
-
+        // Alan Abimael Galicia Ruano - 9959-21-3632
         ValHorasEx=empleados.obtenerHE();
         ValIgss=empleados.obtenerIGSS();
         ValISR=empleados.obtenerISR();
         double ValAnt=empleados.obtenerAnticipo();
         empleados.establecerTotalF(sueldo+ValHorasEx-ValIgss-ValISR-ValAnt);
+        // Monica Gabriela Perez Velásquez - 9959-21-1840
         empleados.establecerCodigo( codigo );
         insertarEnArchivo.seekp( ( codigo - 1 ) * sizeof( DatosEmpleado ) );
         insertarEnArchivo.write( reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
@@ -360,7 +362,7 @@ void modificarRegistroEmp( fstream &actualizarArchivo )
                 actualizarArchivo.write(reinterpret_cast< const char * >( &empleados ), sizeof( DatosEmpleado ) );
         }
     }
-    else if(opcionAc == 5){
+    else if(opcionAc == 5){//Daniel Alexander Hall Alvarez - 9959-21-1395
         int codigo = obtenernCodigoEmp( "\nEscriba el codigo del Empleado que desea Modifcar" );
 
         actualizarArchivo.seekg(( codigo - 1 ) * sizeof( DatosEmpleado ));
@@ -408,7 +410,8 @@ void eliminarRegistroEmp( fstream &eliminarDeArchivo )
 cout<<"\n";
  system("pause");
 } //FIN -ELIMINARREGISTRO-
-void consultarRegistroEmp( fstream &leerDeArchivo )
+void consultarRegistroEmp( fstream &leerDeArchivo )// Monica Gabriela Perez Velásquez - 9959-21-1840
+//Abigail Elizabeth Vásquez Herrera - 9959-21-13777   //Daniel Alexander Hall Alvarez - 9959-21-1395
 {
     cout << left << setw( 10 ) << "\nCodigo" << setw( 14 ) << " Apellido" << setw( 12 ) << " Nombre" << setw( 16 ) << " Correo" << setw( 15 )
     << " Sueldo" << setw( 10 ) << "Horas Extras " << setw( 13 ) << "Anticipo"<< endl;
@@ -431,8 +434,8 @@ void mostrarLineaPantallaEmp( const DatosEmpleado &registro )
           << setw( 12 ) << registro.obtenerNombre().data()
           << setw( 16 ) << registro.obtenerCorreo().data()
           << setw( 15 ) << registro.obtenerSueldo()
-          << setw( 12 ) << registro.obtenerHoras()
-          << setw( 15 ) << registro.obtenerAnticipo() << endl;
+          << setw( 12 ) << registro.obtenerHoras()//Daniel Alexander Hall Alvarez - 9959-21-1395
+          << setw( 15 ) << registro.obtenerAnticipo() << endl;//Abigail Elizabeth Vásquez Herrera - 9959-21-13777
 
 } //FIN -MOSTRARLINEAENOANTALLA-
 Empleado::~Empleado()

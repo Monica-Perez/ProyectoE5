@@ -26,42 +26,44 @@ int main()
         switch ( opcion ) {
             case empleados:
                 {
-                    Empleado claseempleado;
+                    Empleado claseempleado;// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
                 }
             break;
             case puestos:
                 {
-                    Puestos clasepuestos;
+                    Puestos clasepuestos;// Realizado por  Alan Abimael Galicia Ruano - 9959-21-3632
+
                 }
             break;
             case departamentos:
                 {
-                    Departamento clasedepartamentos;
+                    Departamento clasedepartamentos;//Realizado por Daniel Alexander Hall Alvarez - 9959-21-1395
                 }
             break;
             case impuestos:
                 {
-                    Impuestos claseimpuestos;
+                    Impuestos claseimpuestos;//Realizado por Abigail Elizabeth Vásquez Herrera - 9959-21-13777
                 }
             break;
             case empresas:
                 {
-                    Empresas claseempresa;
+                    Empresas claseempresa;// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
                 }
             break;
             case conceptos:
                 {
-                    Conceptos claseconceptos;
+                    Conceptos claseconceptos;// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
                 }
             break;
             case nomina:
                 {
-                    Nomina clasenomina;
+                    Nomina clasenomina;// Realizado por grupo
                 }
             break;
             case bancos:
                 {
-                    Transfe clasetransfe;
+                    Transfe clasetransfe;// Realizado por  Alan Abimael Galicia Ruano - 9959-21-3632
+
                 }
             break;
         }
@@ -73,7 +75,7 @@ int escribirOpcion(){
     system("cls");
     system("color F");
 
-    time_t now = time(0);
+    time_t now = time(0);//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
     tm * time = localtime(&now);
 
     vector<string> dia_semana;

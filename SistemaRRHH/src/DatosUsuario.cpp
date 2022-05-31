@@ -4,7 +4,8 @@
 #include <iostream>
 
 using std::string;
-
+// Monica Gabriela Perez Velásquez - 9959-21-1840
+// Alan Abimael Galicia Ruano - 9959-21-3632
 DatosUsuario::DatosUsuario(int valorUsuario, int valorContra)
 {
     establecerUsuario( valorUsuario );

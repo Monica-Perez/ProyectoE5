@@ -37,7 +37,7 @@ void mostrarLineaPantallaCon( const DatosConceptos &);
 
 using namespace std;
 
-Conceptos::Conceptos()
+Conceptos::Conceptos()// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
 {
     fstream creditoEntradaSalida( "Conceptos.dat", ios::in | ios::out | ios::binary);
     if ( !creditoEntradaSalida ) {
@@ -78,7 +78,7 @@ Conceptos::Conceptos()
 int opcionCon(){
     system("cls");
 
-    time_t now = time(0);
+    time_t now = time(0);//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
     tm * time = localtime(&now);
 
     vector<string> dia_semana;

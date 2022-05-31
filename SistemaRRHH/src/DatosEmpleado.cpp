@@ -4,6 +4,7 @@
 #include <iostream>
 
 using std::string;
+// Monica Gabriela Perez Velásquez - 9959-21-1840
 
 DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valorNombre, string valorCorreo, double valorSueldo, double valorIGSS, double valorISR , int valorHoras, double valorHorasExtras, double valorAnticipo, double TotalFilas)
 {
@@ -12,12 +13,12 @@ DatosEmpleado::DatosEmpleado(int valorCodigo, string valorApellido, string valor
     establecerNombre( valorNombre );
     establecerCorreo( valorCorreo );
     establecerSueldo( valorSueldo );
-    establecerIGSS (valorIGSS);
-    establecerISR (valorISR);
-    establecerHoras (valorHoras);
-    establecerHE (valorHorasExtras);
-    establecerAnticipo( valorAnticipo);
-    establecerTotalF (TotalFilas);
+    establecerIGSS (valorIGSS);//Daniel Alexander Hall Alvarez - 9959-21-1395
+    establecerISR (valorISR);// Monica Gabriela Perez Velásquez - 9959-21-1840
+    establecerHoras (valorHoras);// Monica Gabriela Perez Velásquez - 9959-21-1840
+    establecerHE (valorHorasExtras);// Alan Abimael Galicia Ruano - 9959-21-3632
+    establecerAnticipo( valorAnticipo);//Abigail Elizabeth Vásquez Herrera - 9959-21-13777
+    establecerTotalF (TotalFilas);// Alan Abimael Galicia Ruano - 9959-21-3632
 
 }
 int DatosEmpleado::obtenerCodigo() const

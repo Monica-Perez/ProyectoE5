@@ -36,6 +36,7 @@ void consultarRegistroDepa( fstream& );
 void mostrarLineaPantallaDepa( const DatosDepartamento &);
 using namespace std;
 
+// Realizado por Daniel Alexander Hall Alvarez - 9959-21-1395
 Departamento::Departamento()
 {
     fstream creditoEntradaSalida( "DEPARTAMENTOS.dat", ios::in | ios::out | ios::binary);
@@ -81,7 +82,7 @@ int opcionDepa(){
     time_t now = time(0);
         tm * time = localtime(&now);
 
-vector<string> dia_semana;
+vector<string> dia_semana;//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
 dia_semana.push_back("Domingo");
 dia_semana.push_back("Lunes");
 dia_semana.push_back("Martes");

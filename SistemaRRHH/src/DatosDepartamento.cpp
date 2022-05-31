@@ -5,7 +5,7 @@
 
 using std::string;
 
-
+// Realizado Daniel Alexander Hall Alvarez - 9959-21-1395
 DatosDepartamento::DatosDepartamento(int valorCodigo, string valorApellido, string valorNombre )
 {
     establecerCodigo( valorCodigo );

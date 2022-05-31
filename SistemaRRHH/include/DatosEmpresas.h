@@ -3,7 +3,7 @@
 
 #include <iostream>
 using std::string;
-
+// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
 class DatosEmpresas
 {
     public:

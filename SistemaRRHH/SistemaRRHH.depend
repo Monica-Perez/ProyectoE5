@@ -2884,3 +2884,217 @@
 	<iomanip>
 	<cstdlib>
 
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\main.cpp
+	<iostream>
+	"Empleado.h"
+	"Puestos.h"
+	"Departamento.h"
+	"Impuestos.h"
+	"Empresas.h"
+	"Nomina.h"
+	"Usuarios.h"
+	"Nomina.h"
+	"Conceptos.h"
+	"Transfe.h"
+	<ctime>
+	<vector>
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\empleado.h
+	<iostream>
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\puestos.h
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<iostream>
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\departamento.h
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\impuestos.h
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\empresas.h
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\nomina.h
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\usuarios.h
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\conceptos.h
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\transfe.h
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\conceptos.cpp
+	"Conceptos.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datosconceptos.h
+	<iostream>
+
+1653794284 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datosconceptos.cpp
+	"DatosConceptos.h"
+	"Conceptos.h"
+	<cstring>
+	<iostream>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datosdepartamento.cpp
+	"DatosDepartamento.h"
+	"Departamentos.h"
+	<cstring>
+	<iostream>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datosdepartamento.h
+	<iostream>
+
+1653794284 c:\users\halld\onedrive\escritorio\sistemarrhh\include\departamentos.h
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datosempleado.cpp
+	"DatosEmpleado.h"
+	"Empleado.h"
+	<cstring>
+	<iostream>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datosempleado.h
+	<iostream>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datosempresas.cpp
+	"DatosEmpresas.h"
+	"Empresas.h"
+	<cstring>
+	<iostream>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datosempresas.h
+	<iostream>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datosimpuestos.cpp
+	"datosimpuestos.h"
+	"Impuestos.h"
+	<cstring>
+	<iostream>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datosimpuestos.h
+	<iostream>
+
+1653956360 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datospuestos.cpp
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+
+1653956360 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datospuestos.h
+	<iostream>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datostransfe.cpp
+	"DatosTransfe.h"
+	<cstring>
+	<iostream>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datostransfe.h
+	"DatosTransfe.h"
+	"Transfe.h"
+	<iostream>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\datosusuario.cpp
+	"DatosUsuario.h"
+	"Usuarios.h"
+	<cstring>
+	<iostream>
+
+1653956361 c:\users\halld\onedrive\escritorio\sistemarrhh\include\datosusuario.h
+	<iostream>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\departamento.cpp
+	"Departamento.h"
+	"DatosDepartamento.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\empleado.cpp
+	"Empleado.h"
+	"DatosEmpleado.h"
+	"DatosConceptos.h"
+	"datosimpuestos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\empresas.cpp
+	"Empresas.h"
+	"DatosEmpresas.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\impuestos.cpp
+	"Impuestos.h"
+	<iostream>
+	"datosimpuestos.h"
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\nomina.cpp
+	"Nomina.h"
+	"DatosEmpleado.h"
+	"datosPuestos.h"
+	"DatosDepartamento.h"
+	"DatosConceptos.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956361 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\puestos.cpp
+	"Puestos.h"
+	"datosPuestos.h"
+	<iostream>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+	<cstring>
+	<ctime>
+	<vector>
+
+1653956555 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\transfe.cpp
+	"Transfe.h"
+	"DatosEmpleado.h"
+	"DatosTransfe.h"
+	<iostream>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+
+1653956360 source:c:\users\halld\onedrive\escritorio\sistemarrhh\src\usuarios.cpp
+	"Usuarios.h"
+	"DatosUsuario.h"
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	<ctime>
+	<vector>
+	<fstream>
+	<iomanip>
+	<cstdlib>
+

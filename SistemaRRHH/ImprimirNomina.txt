@@ -1,0 +1,5 @@
+
+Codigo    Apellido      Nombre        Sueldo    Horas Extras   Valor Horas     IGSS      ISR      Anticipo   Total     
+ 1         Rosales       Maria         5600.00     3             105.00        270.48    280.00    125.00    5154.52   
+ 2         Lopez         Juan          6300.00     6             236.25        304.29    315.00    130.00    5916.96   
+ 3         Gomez         Pablo         3000.00     3             56.25         144.90    150.00    100.00    2661.35   
