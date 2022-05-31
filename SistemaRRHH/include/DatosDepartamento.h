@@ -3,6 +3,7 @@
 #include <iostream>
 
 using std::string;
+//Realizado por Daniel Alexander Hall Alvarez - 9959-21-1395
 class DatosDepartamento
 {
     public:

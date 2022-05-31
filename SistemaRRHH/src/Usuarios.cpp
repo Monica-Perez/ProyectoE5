@@ -36,6 +36,8 @@ void modificarRegistroUs( fstream& );
 int obtenerncontra( const char * const );
 
 using namespace std;
+// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
+// Realizado por  Alan Abimael Galicia Ruano - 9959-21-3632
 
 Usuarios::Usuarios()
 {

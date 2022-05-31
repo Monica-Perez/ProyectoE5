@@ -3,7 +3,7 @@
 #include <iostream>
 
 using std::string;
-
+// Realizado por Abigail Elizabeth Vásquez Herrera - 9959-21-13777
 class datosimpuestos
 {
     public:

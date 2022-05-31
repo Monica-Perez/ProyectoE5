@@ -22,6 +22,8 @@ void mostrarLineaPantallaP( const datosPuestos &);
 
 enum Optios { imprim = 1, nuevo = 2, leer, eliminar, editar, regresar};
 
+// Realizado por  Alan Abimael Galicia Ruano - 9959-21-3632
+
 Puestos::Puestos()
 {
 	fstream puestoEntradaSalida( "puest.dat", ios::in | ios::out | ios::binary);
@@ -72,7 +74,7 @@ Puestos::Puestos()
 int Puestos::escribirOption()
 {
     system("cls");
-    time_t now = time(0);
+    time_t now = time(0);//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
     tm * time = localtime(&now);
 
     vector<string> dia_semana;

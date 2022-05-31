@@ -36,6 +36,7 @@ void consultarRegistroEmpre( fstream& );
 void mostrarLineaPantallaEmpre( const DatosEmpresas &);
 
 using namespace std;
+// Realizado por Monica Gabriela Perez Velásquez - 9959-21-1840
 
 Empresas::Empresas()
 {
@@ -77,7 +78,7 @@ Empresas::Empresas()
 int opcionEmpre(){
 
     system("cls");
-    time_t now = time(0);
+    time_t now = time(0);//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
     tm * time = localtime(&now);
 
     vector<string> dia_semana;

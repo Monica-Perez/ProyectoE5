@@ -39,6 +39,7 @@ void mostrarLineaPantallaImp( const datosimpuestos &);
 
 using namespace std;
 
+// Realizado por Abigail Elizabeth Vásquez Herrera - 9959-21-13777
 
 Impuestos::Impuestos()
 {
@@ -81,7 +82,7 @@ Impuestos::Impuestos()
 int opcionImp(){
 
     system("cls");
-    time_t now = time(0);
+    time_t now = time(0);//Hora y fecha por Daniel Alexander Hall Alvarez - 9959-21-1395
     tm * time = localtime(&now);
 
     vector<string> dia_semana;

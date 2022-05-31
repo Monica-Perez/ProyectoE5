@@ -33,8 +33,12 @@ void mostrarLineaPantallaTransfe(const DatosTransfe &);
 int obtenernCodigoTrans( const char * const );
 void eliminarRegistroTransfe( fstream &);
 
+// Realizado por  Alan Abimael Galicia Ruano - 9959-21-3632
+
 Transfe::Transfe()
+
 {
+
     fstream creditoEntradaSalida11( "Transferencia.dat", ios::in | ios::out | ios::binary);
     if ( !creditoEntradaSalida11 ) {
         cerr << "No se pudo abrir el archivo." << endl;
@@ -43,11 +47,6 @@ Transfe::Transfe()
         exit ( 1 );
     }
      system("cls");
-
-    cout<<"\n\t\t\t\t\t  ----------------------------"<<endl;
-	cout<<"\t\t\t\t\t   |   Transferencia Bancaria  |"<<endl;
-	cout<<"\t\t\t\t\t  ----------------------------"<<endl<<endl;
-
 	fstream creditoEntradaSalida( "emp.dat", ios::in | ios::out | ios::binary);
 	nuevoRegistroTransfe(creditoEntradaSalida, creditoEntradaSalida11);
 	consultarRegistroTransfe(creditoEntradaSalida11);

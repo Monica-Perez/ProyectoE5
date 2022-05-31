@@ -6,6 +6,7 @@
 #include <cstring>
 
 using namespace std;
+// Realizado por  Alan Abimael Galicia Ruano - 9959-21-3632
 
 datosPuestos::datosPuestos(int valorCodigoP, string valorEstatus, string valorNombrePuestos)
 {

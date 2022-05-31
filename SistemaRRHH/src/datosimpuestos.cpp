@@ -4,6 +4,8 @@
 #include <iostream>
 
 using std::string;
+
+// Realizado Por Abigail Elizabeth Vásquez Herrera - 9959-21-13777
 datosimpuestos::datosimpuestos(int valorCodigo, string valorNombre, double valorCantidad)
 {
      establecerCodigo( valorCodigo );
